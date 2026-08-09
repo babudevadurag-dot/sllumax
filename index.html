@@ -1,300 +1,465 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Your Company Name</title>
+<title>SLLUMAX - Company Policies</title>
 
-<meta name="description" content="Professional Products, Services and PDF Documentation">
+<meta name="description" content="SLLUMAX Company Policies - HR Policy, Safety Policy and Risk Management Policy">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#f8f9fc;
-color:#333;
-line-height:1.6;
+    background:#f5f7fb;
+    color:#333;
+    line-height:1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#ffffff;
+    box-shadow:0 3px 15px rgba(0,0,0,.10);
+    z-index:999;
+}
+
+nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 25px;
+}
+
+/* Company Logo */
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-placeholder{
+    width:55px;
+    height:55px;
+    border:2px dashed #0066ff;
+    border-radius:8px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#0066ff;
+    font-size:11px;
+    font-weight:600;
+    text-align:center;
+}
+
+.company-name{
+    font-size:27px;
+    font-weight:700;
+    color:#0066ff;
 }
 
 /* Navigation */
 
-header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-background:white;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-z-index:999;
-}
-
-nav{
-max-width:1200px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 30px;
-}
-
-.logo{
-font-size:28px;
-font-weight:700;
-color:#0066ff;
-}
-
 nav ul{
-display:flex;
-list-style:none;
-gap:30px;
+    display:flex;
+    list-style:none;
+    gap:28px;
 }
 
 nav ul li a{
-text-decoration:none;
-color:#333;
-font-weight:500;
-transition:.3s;
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
 }
 
 nav ul li a:hover{
-color:#0066ff;
+    color:#0066ff;
 }
 
 .menu-btn{
-display:none;
-font-size:30px;
-cursor:pointer;
+    display:none;
+    font-size:30px;
+    cursor:pointer;
 }
 
-/* Hero */
+/* =========================
+   HERO
+========================= */
 
 .hero{
-
-height:100vh;
-
-background:linear-gradient(135deg,#0066ff,#00b4ff);
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-padding:20px;
-
-color:white;
-
+    min-height:620px;
+    background:linear-gradient(135deg,#005bea,#00c6fb);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px 80px;
+    color:white;
 }
 
 .hero-content{
-
-max-width:800px;
-
+    max-width:850px;
 }
 
 .hero h1{
-
-font-size:58px;
-
-margin-bottom:20px;
-
+    font-size:55px;
+    margin-bottom:20px;
+    font-weight:700;
 }
 
 .hero p{
-
-font-size:20px;
-
-margin-bottom:35px;
-
+    font-size:20px;
+    margin-bottom:35px;
 }
 
 .btn{
-
-display:inline-block;
-
-padding:15px 40px;
-
-background:white;
-
-color:#0066ff;
-
-font-weight:600;
-
-text-decoration:none;
-
-border-radius:50px;
-
-transition:.3s;
-
+    display:inline-block;
+    padding:13px 30px;
+    background:white;
+    color:#0066ff;
+    font-weight:600;
+    text-decoration:none;
+    border-radius:7px;
+    transition:.3s;
 }
 
 .btn:hover{
-
-background:#222;
-
-color:white;
-
+    background:#111;
+    color:white;
 }
 
-/* Sections */
+/* =========================
+   SECTIONS
+========================= */
 
 section{
-
-padding:100px 20px;
-
+    padding:85px 20px;
 }
 
 .container{
-
-max-width:1200px;
-
-margin:auto;
-
+    max-width:1200px;
+    margin:auto;
 }
 
 .section-title{
-
-font-size:40px;
-
-text-align:center;
-
-margin-bottom:50px;
-
-color:#0066ff;
-
+    font-size:38px;
+    text-align:center;
+    margin-bottom:45px;
+    color:#005bea;
 }
 
-/* Cards */
-
-.cards{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:25px;
-
+.section-description{
+    max-width:750px;
+    margin:-25px auto 40px;
+    text-align:center;
+    color:#666;
 }
 
-.card{
+/* =========================
+   POLICY CARDS
+========================= */
 
-background:white;
-
-padding:35px;
-
-border-radius:15px;
-
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-
-transition:.3s;
-
+.policy-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
 }
 
-.card:hover{
-
-transform:translateY(-8px);
-
+.policy-card{
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+    border-top:5px solid #0066ff;
+    transition:.3s;
 }
 
-.card h3{
-
-margin-bottom:15px;
-
-color:#0066ff;
-
+.policy-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.13);
 }
 
-/* Mobile */
+.policy-icon{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#eef5ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.policy-card h3{
+    color:#005bea;
+    margin-bottom:12px;
+    font-size:22px;
+}
+
+.policy-card p{
+    color:#666;
+    margin-bottom:25px;
+}
+
+/* =========================
+   POLICY CENTER
+========================= */
+
+.policy-section{
+    background:#eef5ff;
+}
+
+.search-box{
+    max-width:650px;
+    margin:0 auto 40px;
+}
+
+.search-box input{
+    width:100%;
+    padding:16px 20px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:16px;
+    outline:none;
+}
+
+.search-box input:focus{
+    border-color:#0066ff;
+    box-shadow:0 0 0 3px rgba(0,102,255,.10);
+}
+
+.policy-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.document-card{
+    background:white;
+    padding:28px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.document-card h3{
+    color:#005bea;
+    margin-bottom:10px;
+}
+
+.document-card p{
+    color:#666;
+    margin-bottom:20px;
+}
+
+.view-btn{
+    display:inline-block;
+    padding:10px 20px;
+    background:#0066ff;
+    color:white;
+    border-radius:6px;
+    text-decoration:none;
+    margin-right:8px;
+    font-size:14px;
+}
+
+.view-btn:hover{
+    background:#0047b3;
+}
+
+.download-btn{
+    display:inline-block;
+    padding:10px 20px;
+    background:#222;
+    color:white;
+    border-radius:6px;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.download-btn:hover{
+    background:#000;
+}
+
+/* =========================
+   INFORMATION SECTION
+========================= */
+
+.info-section{
+    background:white;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.info-box{
+    padding:30px;
+    border-radius:12px;
+    background:#f8f9fc;
+    border-left:5px solid #0066ff;
+}
+
+.info-box h3{
+    color:#005bea;
+    margin-bottom:10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#101820;
+    color:white;
+    padding:45px 20px;
+    text-align:center;
+}
+
+footer h2{
+    margin-bottom:10px;
+}
+
+footer p{
+    color:#ccc;
+}
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+#topBtn{
+    display:none;
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#0066ff;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:768px){
 
-nav ul{
+    nav{
+        padding:10px 18px;
+    }
 
-display:none;
+    .company-name{
+        font-size:22px;
+    }
 
-position:absolute;
+    .logo-placeholder{
+        width:45px;
+        height:45px;
+        font-size:9px;
+    }
 
-top:70px;
+    nav ul{
+        display:none;
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:white;
+        flex-direction:column;
+        padding:20px;
+        gap:15px;
+        box-shadow:0 5px 15px rgba(0,0,0,.10);
+    }
 
-left:0;
+    nav ul.active{
+        display:flex;
+    }
 
-width:100%;
+    .menu-btn{
+        display:block;
+    }
 
-background:white;
+    .hero h1{
+        font-size:38px;
+    }
 
-flex-direction:column;
+    .hero p{
+        font-size:17px;
+    }
 
-padding:20px;
-
-}
-
-nav ul.active{
-
-display:flex;
-
-}
-
-.menu-btn{
-
-display:block;
-
-}
-
-.hero h1{
-
-font-size:38px;
-
-}
-
-.hero p{
-
-font-size:18px;
-
-}
+    .section-title{
+        font-size:30px;
+    }
 
 }
 
 </style>
-
 </head>
 
 <body>
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
 <nav>
 
-<div class="logo">YOUR LOGO</div>
+<div class="logo-area">
 
-<div class="menu-btn" onclick="menu()">☰</div>
+    <!-- LOGO PLACEHOLDER
+         Replace this DIV with your company logo later -->
+
+    <div class="logo-placeholder">
+        COMPANY<br>LOGO
+    </div>
+
+    <div class="company-name">
+        SLLUMAX
+    </div>
+
+</div>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
 
 <ul id="menu">
 
-<li><a href="#home">Home</a></li>
-
-<li><a href="#about">About</a></li>
-
-<li><a href="#services">Services</a></li>
-
-<li><a href="#downloads">Downloads</a></li>
-
-<li><a href="#contact">Contact</a></li>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#policies">Policies</a></li>
+    <li><a href="#documents">Documents</a></li>
+    <li><a href="#information">Information</a></li>
 
 </ul>
 
@@ -302,632 +467,131 @@ font-size:18px;
 
 </header>
 
-<!-- Hero -->
+
+<!-- =========================
+     HOME
+========================= -->
 
 <section class="hero" id="home">
 
 <div class="hero-content">
 
-<h1>Welcome to Our Website</h1>
+<h1>
+    SLLUMAX Company Policies
+</h1>
 
 <p>
-Professional Solutions • Product Information • PDF Guides • Customer Support
+    Welcome to the SLLUMAX Policy Portal
 </p>
 
-<a href="#downloads" class="btn">
-Download Guides
+<p>
+    Access important company policies, guidelines,
+    safety information and risk management documents.
+</p>
+
+<a href="#policies" class="btn">
+    View Policies
 </a>
 
 </div>
 
 </section>
 
-<!-- About -->
-
-<section id="about">
-
-<div class="container">
-
-<h2 class="section-title">About Us</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>Who We Are</h3>
-
-<p>
-Replace this text with your company introduction. Describe your business, products, and services.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Our Mission</h3>
-
-<p>
-Provide reliable products and excellent customer service while offering easy access to documentation.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Why Choose Us?</h3>
-
-<p>
-Quality products, technical support, downloadable manuals, and trusted customer service.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
 
 <!-- =========================
-     SERVICES SECTION
+     POLICY OVERVIEW
 ========================= -->
 
-<section id="services" style="background:#eef5ff;">
+<section id="policies">
 
 <div class="container">
 
-<h2 class="section-title">Our Services</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>📄 Product Documentation</h3>
-<p>
-Download user manuals, installation guides, product catalogs,
-and technical documentation anytime.
-</p>
-</div>
-
-<div class="card">
-<h3>🛠 Technical Support</h3>
-<p>
-Our support team is ready to assist with troubleshooting,
-installation, maintenance, and product usage.
-</p>
-</div>
-
-<div class="card">
-<h3>⚙ Product Solutions</h3>
-<p>
-We provide reliable products and customized solutions
-for residential, commercial, and industrial applications.
-</p>
-</div>
-
-<div class="card">
-<h3>🔄 Product Updates</h3>
-<p>
-Stay informed with the latest manuals, firmware updates,
-and technical announcements.
-</p>
-</div>
-
-<div class="card">
-<h3>💬 Customer Service</h3>
-<p>
-Contact us for product information, quotations,
-or warranty-related assistance.
-</p>
-</div>
-
-<div class="card">
-<h3>🚚 Fast Delivery</h3>
-<p>
-Quick product availability with dependable shipping
-and after-sales support.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     WHY CHOOSE US
-========================= -->
-
-<section id="features">
-
-<div class="container">
-
-<h2 class="section-title">Why Choose Us</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>⭐ Trusted Quality</h3>
-<p>
-Our products are designed for durability, performance,
-and long-term reliability.
-</p>
-</div>
-
-<div class="card">
-<h3>⚡ Fast Support</h3>
-<p>
-Receive prompt assistance from our knowledgeable
-technical support team.
-</p>
-</div>
-
-<div class="card">
-<h3>🌍 Worldwide Service</h3>
-<p>
-Serving customers across multiple regions with
-consistent quality and dependable service.
-</p>
-</div>
-
-<div class="card">
-<h3>🔒 Secure Downloads</h3>
-<p>
-Access official PDF manuals and documentation
-directly from our website.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     COMPANY STATS
-========================= -->
-
-<section style="background:#0066ff;color:white;">
-
-<div class="container">
-
-<h2 class="section-title" style="color:white;">
-Our Achievements
+<h2 class="section-title">
+    Our Policies
 </h2>
 
-<div class="cards">
-
-<div class="card" style="text-align:center;">
-<h2 class="counter" data-target="500">0</h2>
-<p>Projects Completed</p>
-</div>
-
-<div class="card" style="text-align:center;">
-<h2 class="counter" data-target="150">0</h2>
-<p>Products</p>
-</div>
-
-<div class="card" style="text-align:center;">
-<h2 class="counter" data-target="1000">0</h2>
-<p>Happy Customers</p>
-</div>
-
-<div class="card" style="text-align:center;">
-<h2 class="counter" data-target="24">0</h2>
-<p>Support Hours</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<script>
-
-/* Animated Counter */
-
-const counters=document.querySelectorAll(".counter");
-
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-const counter=entry.target;
-
-const target=+counter.dataset.target;
-
-let count=0;
-
-const speed=target/100;
-
-const update=()=>{
-
-count+=speed;
-
-if(count<target){
-
-counter.innerText=Math.ceil(count);
-
-requestAnimationFrame(update);
-
-}else{
-
-counter.innerText=target+"+";
-
-}
-
-};
-
-update();
-
-observer.unobserve(counter);
-
-}
-
-});
-
-});
-
-counters.forEach(counter=>observer.observe(counter));
-
-</script>
-
-<!-- ==========================================
-     DOWNLOADS SECTION
-=========================================== -->
-
-<section id="downloads">
-
-<div class="container">
-
-<h2 class="section-title">Download Center</h2>
-
-<p style="text-align:center;max-width:700px;margin:auto;margin-bottom:40px;">
-Browse our collection of product manuals, installation guides,
-catalogs and technical documents.
+<p class="section-description">
+    SLLUMAX is committed to maintaining a safe,
+    professional and responsible working environment.
 </p>
 
-<!-- Search Box -->
 
-<div style="max-width:600px;margin:0 auto 40px;">
+<div class="policy-grid">
 
-<input
-type="text"
-id="searchPDF"
-placeholder="Search PDF Guides..."
-onkeyup="searchPDF()"
-style="width:100%;
-padding:15px;
-font-size:16px;
-border:1px solid #ddd;
-border-radius:8px;
-outline:none;">
 
+<!-- HR POLICY -->
+
+<div class="policy-card">
+
+<div class="policy-icon">
+    👥
 </div>
 
-<div class="cards" id="pdfList">
-
-<div class="card pdf-card">
-
-<h3>📘 User Guide</h3>
-
-<p>
-Complete user manual for installation and operation.
-</p>
-
-<br>
-
-<a class="btn"
-href="pdf/User-Guide.pdf"
-target="_blank">
-View
-</a>
-
-<a class="btn"
-style="margin-left:10px;background:#0066ff;color:white;"
-href="pdf/User-Guide.pdf"
-download>
-Download
-</a>
-
-</div>
-
-<div class="card pdf-card">
-
-<h3>⚙ Installation Guide</h3>
-
-<p>
-Step-by-step installation instructions.
-</p>
-
-<br>
-
-<a class="btn"
-href="pdf/Installation-Guide.pdf"
-target="_blank">
-View
-</a>
-
-<a class="btn"
-style="margin-left:10px;background:#0066ff;color:white;"
-href="pdf/Installation-Guide.pdf"
-download>
-Download
-</a>
-
-</div>
-
-<div class="card pdf-card">
-
-<h3>📄 Product Catalog</h3>
-
-<p>
-Latest product catalog with specifications.
-</p>
-
-<br>
-
-<a class="btn"
-href="pdf/Product-Catalog.pdf"
-target="_blank">
-View
-</a>
-
-<a class="btn"
-style="margin-left:10px;background:#0066ff;color:white;"
-href="pdf/Product-Catalog.pdf"
-download>
-Download
-</a>
-
-</div>
-
-<div class="card pdf-card">
-
-<h3>🛡 Warranty Information</h3>
-
-<p>
-Warranty terms and service information.
-</p>
-
-<br>
-
-<a class="btn"
-href="pdf/Warranty.pdf"
-target="_blank">
-View
-</a>
-
-<a class="btn"
-style="margin-left:10px;background:#0066ff;color:white;"
-href="pdf/Warranty.pdf"
-download>
-Download
-</a>
-
-</div>
-
-<div class="card pdf-card">
-
-<h3>🔧 Maintenance Manual</h3>
-
-<p>
-Maintenance procedures and best practices.
-</p>
-
-<br>
-
-<a class="btn"
-href="pdf/Maintenance.pdf"
-target="_blank">
-View
-</a>
-
-<a class="btn"
-style="margin-left:10px;background:#0066ff;color:white;"
-href="pdf/Maintenance.pdf"
-download>
-Download
-</a>
-
-</div>
-
-<div class="card pdf-card">
-
-<h3>📑 Technical Datasheet</h3>
-
-<p>
-Technical specifications and dimensions.
-</p>
-
-<br>
-
-<a class="btn"
-href="pdf/Datasheet.pdf"
-target="_blank">
-View
-</a>
-
-<a class="btn"
-style="margin-left:10px;background:#0066ff;color:white;"
-href="pdf/Datasheet.pdf"
-download>
-Download
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<script>
-
-/* PDF Search */
-
-function searchPDF(){
-
-let input=document.getElementById("searchPDF");
-
-let filter=input.value.toUpperCase();
-
-let cards=document.getElementsByClassName("pdf-card");
-
-for(let i=0;i<cards.length;i++){
-
-let title=cards[i].getElementsByTagName("h3")[0];
-
-if(title.innerHTML.toUpperCase().indexOf(filter)>-1){
-
-cards[i].style.display="block";
-
-}else{
-
-cards[i].style.display="none";
-
-}
-
-}
-
-}
-
-</script>
-
-<!-- ==========================================
-     CONTACT SECTION
-========================================== -->
-
-<section id="contact" style="background:#eef5ff;">
-
-<div class="container">
-
-<h2 class="section-title">Contact Us</h2>
-
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-gap:40px;
-align-items:start;
-">
-
-<!-- Contact Information -->
-
-<div>
-
-<h3 style="color:#0066ff;margin-bottom:20px;">
-Get In Touch
+<h3>
+    HR Policy
 </h3>
 
-<p style="margin-bottom:15px;">
-We would be happy to answer your questions.
-Feel free to contact us.
+<p>
+    Guidelines covering employees, workplace practices,
+    responsibilities, conduct, attendance and other
+    human resource related matters.
 </p>
 
-<p><strong>📍 Address</strong><br>
-123 Business Street<br>
-Your City, State ZIP<br>
-Country
-</p>
-
-<br>
-
-<p><strong>📞 Phone</strong><br>
-<a href="tel:+911234567890">
-+91 12345 67890
+<a href="#documents" class="view-btn">
+    View Policy
 </a>
-</p>
-
-<br>
-
-<p><strong>📧 Email</strong><br>
-<a href="mailto:info@yourcompany.com">
-info@yourcompany.com
-</a>
-</p>
-
-<br>
-
-<p><strong>🌐 Website</strong><br>
-<a href="#">
-www.yourcompany.com
-</a>
-</p>
 
 </div>
 
-<!-- Contact Form -->
 
-<div>
+<!-- SAFETY POLICY -->
 
-<form onsubmit="return sendMessage();">
+<div class="policy-card">
 
-<input
-type="text"
-placeholder="Your Name"
-required
-style="
-width:100%;
-padding:15px;
-margin-bottom:15px;
-border:1px solid #ccc;
-border-radius:8px;
-">
+<div class="policy-icon">
+    🦺
+</div>
 
-<input
-type="email"
-placeholder="Email Address"
-required
-style="
-width:100%;
-padding:15px;
-margin-bottom:15px;
-border:1px solid #ccc;
-border-radius:8px;
-">
+<h3>
+    Safety Policy
+</h3>
 
-<input
-type="text"
-placeholder="Subject"
-required
-style="
-width:100%;
-padding:15px;
-margin-bottom:15px;
-border:1px solid #ccc;
-border-radius:8px;
-">
+<p>
+    Safety requirements and guidelines designed to
+    protect employees, visitors, workplace assets
+    and operations.
+</p>
 
-<textarea
-rows="6"
-placeholder="Your Message"
-required
-style="
-width:100%;
-padding:15px;
-margin-bottom:20px;
-border:1px solid #ccc;
-border-radius:8px;
-resize:vertical;
-"></textarea>
+<a href="#documents" class="view-btn">
+    View Policy
+</a>
 
-<button
-class="btn"
-style="
-border:none;
-cursor:pointer;
-background:#0066ff;
-color:white;
-">
-Send Message
-</button>
+</div>
 
-</form>
+
+<!-- RISK MANAGEMENT -->
+
+<div class="policy-card">
+
+<div class="policy-icon">
+    🛡️
+</div>
+
+<h3>
+    Risk Management Policy
+</h3>
+
+<p>
+    Guidelines for identifying, evaluating, controlling
+    and monitoring business and operational risks.
+</p>
+
+<a href="#documents" class="view-btn">
+    View Policy
+</a>
+
+</div>
+
 
 </div>
 
@@ -935,161 +599,351 @@ Send Message
 
 </section>
 
-<!-- ==========================================
-     FOOTER
-========================================== -->
 
-<footer style="
-background:#111;
-color:white;
-padding:50px 20px;
-text-align:center;
-">
+<!-- =========================
+     DOCUMENT CENTER
+========================= -->
 
-<h2 style="margin-bottom:15px;">
-Your Company Name
+<section class="policy-section" id="documents">
+
+<div class="container">
+
+<h2 class="section-title">
+    Policy Document Center
 </h2>
 
-<p style="margin-bottom:20px;">
-Professional Products • Documentation • Customer Support
+<p class="section-description">
+    Select a policy below to view or download the
+    official SLLUMAX policy document.
 </p>
 
-<div style="margin-bottom:20px;">
 
-<a href="#" style="color:white;text-decoration:none;margin:0 10px;">
-Facebook
+<!-- SEARCH -->
+
+<div class="search-box">
+
+<input
+    type="text"
+    id="policySearch"
+    placeholder="Search policies..."
+    onkeyup="searchPolicies()">
+
+</div>
+
+
+<div class="policy-list" id="policyList">
+
+
+<!-- HR POLICY DOCUMENT -->
+
+<div class="document-card policy-document">
+
+<h3>
+    👥 HR Policy
+</h3>
+
+<p>
+    Human Resources Policy and employee guidelines.
+</p>
+
+<!-- Put your PDF in the "pdf" folder -->
+
+<a
+    href="pdf/HR-Policy.pdf"
+    target="_blank"
+    class="view-btn">
+    View
 </a>
 
-<a href="#" style="color:white;text-decoration:none;margin:0 10px;">
-LinkedIn
-</a>
-
-<a href="#" style="color:white;text-decoration:none;margin:0 10px;">
-YouTube
+<a
+    href="pdf/HR-Policy.pdf"
+    download
+    class="download-btn">
+    Download
 </a>
 
 </div>
 
+
+<!-- SAFETY POLICY DOCUMENT -->
+
+<div class="document-card policy-document">
+
+<h3>
+    🦺 Safety Policy
+</h3>
+
 <p>
+    Workplace safety policy and safety guidelines.
+</p>
 
-© 2026 Your Company Name
+<a
+    href="pdf/Safety-Policy.pdf"
+    target="_blank"
+    class="view-btn">
+    View
+</a>
 
-<br><br>
+<a
+    href="pdf/Safety-Policy.pdf"
+    download
+    class="download-btn">
+    Download
+</a>
 
-All Rights Reserved.
+</div>
 
+
+<!-- RISK MANAGEMENT POLICY -->
+
+<div class="document-card policy-document">
+
+<h3>
+    🛡️ Risk Management Policy
+</h3>
+
+<p>
+    Risk identification, assessment and management policy.
+</p>
+
+<a
+    href="pdf/Risk-Management-Policy.pdf"
+    target="_blank"
+    class="view-btn">
+    View
+</a>
+
+<a
+    href="pdf/Risk-Management-Policy.pdf"
+    download
+    class="download-btn">
+    Download
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     INFORMATION
+========================= -->
+
+<section class="info-section" id="information">
+
+<div class="container">
+
+<h2 class="section-title">
+    Policy Information
+</h2>
+
+<div class="info-grid">
+
+
+<div class="info-box">
+
+<h3>
+    Policy Compliance
+</h3>
+
+<p>
+    All employees and relevant stakeholders are expected
+    to understand and comply with applicable SLLUMAX
+    policies and procedures.
+</p>
+
+</div>
+
+
+<div class="info-box">
+
+<h3>
+    Document Control
+</h3>
+
+<p>
+    Employees should always refer to the latest approved
+    version of each policy document available through
+    the official policy portal.
+</p>
+
+</div>
+
+
+<div class="info-box">
+
+<h3>
+    Policy Review
+</h3>
+
+<p>
+    Company policies may be reviewed and updated from
+    time to time based on business requirements,
+    regulatory requirements and organizational needs.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<h2>
+    SLLUMAX
+</h2>
+
+<p>
+    Company Policies • Safety • Risk Management • HR
+</p>
+
+<br>
+
+<p>
+    © 2026 SLLUMAX. All Rights Reserved.
 </p>
 
 </footer>
 
-<!-- Back To Top -->
 
-<button
-id="topBtn"
-onclick="topFunction()"
-style="
-display:none;
-position:fixed;
-bottom:30px;
-right:30px;
-background:#0066ff;
-color:white;
-border:none;
-padding:15px 18px;
-border-radius:50%;
-font-size:20px;
-cursor:pointer;
-box-shadow:0 5px 15px rgba(0,0,0,.3);
-">
+<!-- =========================
+     BACK TO TOP
+========================= -->
 
-↑
-
+<button id="topBtn" onclick="topFunction()">
+    ↑
 </button>
+
 
 <script>
 
-/* Mobile Menu */
+/* =========================
+   MOBILE MENU
+========================= */
 
-function menu(){
+function toggleMenu(){
 
-document.getElementById("menu").classList.toggle("active");
-
-}
-
-/* Contact Form */
-
-function sendMessage(){
-
-alert("Thank you! Your message has been submitted.");
-
-return false;
+    document
+        .getElementById("menu")
+        .classList
+        .toggle("active");
 
 }
 
-/* Back To Top */
 
-let topButton=document.getElementById("topBtn");
+/* =========================
+   POLICY SEARCH
+========================= */
+
+function searchPolicies(){
+
+    let input =
+        document
+        .getElementById("policySearch")
+        .value
+        .toUpperCase();
+
+    let cards =
+        document
+        .getElementsByClassName("policy-document");
+
+    for(let i=0;i<cards.length;i++){
+
+        let title =
+            cards[i]
+            .getElementsByTagName("h3")[0];
+
+        if(
+            title.innerText
+            .toUpperCase()
+            .indexOf(input) > -1
+        ){
+
+            cards[i].style.display="block";
+
+        }
+        else{
+
+            cards[i].style.display="none";
+
+        }
+
+    }
+
+}
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+let topButton =
+    document.getElementById("topBtn");
+
 
 window.onscroll=function(){
 
-if(document.body.scrollTop>300||
+    if(
+        document.body.scrollTop > 300 ||
+        document.documentElement.scrollTop > 300
+    ){
 
-document.documentElement.scrollTop>300){
+        topButton.style.display="block";
 
-topButton.style.display="block";
+    }
+    else{
 
-}else{
+        topButton.style.display="none";
 
-topButton.style.display="none";
-
-}
+    }
 
 };
 
+
 function topFunction(){
 
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
 
 }
 
-/* Fade Animation */
 
-const observer2=new IntersectionObserver(entries=>{
+/* =========================
+   CLOSE MOBILE MENU
+========================= */
 
-entries.forEach(entry=>{
+document.querySelectorAll("#menu a")
+.forEach(function(link){
 
-if(entry.isIntersecting){
+    link.addEventListener("click",function(){
 
-entry.target.style.opacity=1;
+        document
+        .getElementById("menu")
+        .classList
+        .remove("active");
 
-entry.target.style.transform="translateY(0)";
-
-}
-
-});
-
-});
-
-document.querySelectorAll("section").forEach(sec=>{
-
-sec.style.opacity=0;
-
-sec.style.transform="translateY(50px)";
-
-sec.style.transition="all .8s ease";
-
-observer2.observe(sec);
+    });
 
 });
 
 </script>
 
 </body>
-
 </html>
+```
