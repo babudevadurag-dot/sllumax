@@ -1,18 +1,39 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>SLLUMAX - Company Policies</title>
-<meta name="description" content="SLLUMAX Company Policies - Pune, Chennai and AP Policies">
+
+<meta
+name="description"
+content="SLLUMAX Company Policies - Pune, Chennai and AP Policy Documents"
+>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet"
+>
+
 
 <style>
+
+/* ==============================
+   GLOBAL
+============================== */
+
 *{
     margin:0;
     padding:0;
@@ -26,6 +47,11 @@ body{
     color:#333;
     line-height:1.6;
 }
+
+
+/* ==============================
+   HEADER
+============================== */
 
 header{
     position:fixed;
@@ -88,6 +114,11 @@ nav ul li a:hover{
     cursor:pointer;
 }
 
+
+/* ==============================
+   HERO
+============================== */
+
 .hero{
     min-height:620px;
     background:linear-gradient(135deg,#005bea,#00c6fb);
@@ -131,6 +162,11 @@ nav ul li a:hover{
     color:white;
 }
 
+
+/* ==============================
+   SECTIONS
+============================== */
+
 section{
     padding:85px 20px;
 }
@@ -154,9 +190,16 @@ section{
     color:#666;
 }
 
+
+/* ==============================
+   POLICY CARDS
+============================== */
+
 .policy-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
     gap:30px;
 }
 
@@ -164,25 +207,36 @@ section{
     background:white;
     padding:35px;
     border-radius:15px;
-    box-shadow:0 8px 30px rgba(0,0,0,.08);
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,.08);
+
     border-top:5px solid #0066ff;
+
     transition:.3s;
 }
 
 .policy-card:hover{
     transform:translateY(-8px);
-    box-shadow:0 15px 35px rgba(0,0,0,.13);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.13);
 }
 
 .policy-icon{
     width:65px;
     height:65px;
+
     border-radius:50%;
+
     background:#eef5ff;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     font-size:30px;
+
     margin-bottom:20px;
 }
 
@@ -197,6 +251,11 @@ section{
     margin-bottom:25px;
 }
 
+
+/* ==============================
+   DOCUMENT SECTION
+============================== */
+
 .policy-section{
     background:#eef5ff;
 }
@@ -208,73 +267,125 @@ section{
 
 .search-box input{
     width:100%;
+
     padding:16px 20px;
+
     border:1px solid #ddd;
+
     border-radius:8px;
+
     font-size:16px;
+
     outline:none;
+
+    background:white;
 }
 
 .search-box input:focus{
     border-color:#0066ff;
-    box-shadow:0 0 0 3px rgba(0,102,255,.10);
+
+    box-shadow:
+    0 0 0 3px rgba(0,102,255,.10);
 }
 
+
+/* ==============================
+   LOCATION SECTIONS
+============================== */
+
 .location-section{
-    margin-bottom:55px;
+    margin-bottom:60px;
 }
 
 .location-title{
     display:flex;
     align-items:center;
     gap:12px;
+
     font-size:30px;
+
     color:#005bea;
+
     margin-bottom:25px;
-    border-bottom:2px solid #d8e7ff;
+
+    border-bottom:
+    2px solid #d5e5ff;
+
     padding-bottom:12px;
 }
 
 .policy-list{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
     gap:25px;
 }
 
+
+/* ==============================
+   DOCUMENT CARD
+============================== */
+
 .document-card{
     background:white;
+
     padding:28px;
+
     border-radius:12px;
-    box-shadow:0 5px 20px rgba(0,0,0,.07);
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.07);
+
     transition:.3s;
 }
 
 .document-card:hover{
     transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(0,0,0,.10);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.12);
 }
 
 .document-card h3{
     color:#005bea;
+
     margin-bottom:10px;
+
     font-size:19px;
+
     word-break:break-word;
 }
 
 .document-card p{
     color:#666;
+
     margin-bottom:20px;
 }
+
+
+/* ==============================
+   BUTTONS
+============================== */
 
 .view-btn,
 .download-btn{
     display:inline-block;
+
     padding:10px 20px;
+
     border-radius:6px;
+
     text-decoration:none;
+
     margin-right:8px;
+
+    margin-top:5px;
+
     font-size:14px;
-    cursor:pointer;
+
+    transition:.3s;
 }
 
 .view-btn{
@@ -295,30 +406,91 @@ section{
     background:#000;
 }
 
-.no-pdf{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    color:#777;
-    text-align:center;
-    grid-column:1/-1;
-}
+
+/* ==============================
+   STATUS
+============================== */
 
 .loading{
     text-align:center;
+
     color:#0066ff;
+
     font-size:18px;
+
     padding:30px;
+}
+
+.loading-spinner{
+    width:35px;
+    height:35px;
+
+    border:4px solid #dceaff;
+
+    border-top:
+    4px solid #0066ff;
+
+    border-radius:50%;
+
+    animation:
+    spin 1s linear infinite;
+
+    margin:0 auto 15px;
+}
+
+@keyframes spin{
+
+    0%{
+        transform:rotate(0deg);
+    }
+
+    100%{
+        transform:rotate(360deg);
+    }
+
+}
+
+.no-pdf{
+    background:white;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    color:#777;
+
+    text-align:center;
+
+    grid-column:1/-1;
 }
 
 .error-message{
     background:#fff0f0;
-    border:1px solid #ffcaca;
-    color:#c00;
-    padding:20px;
+
+    border:
+    1px solid #ffcaca;
+
+    color:#b00000;
+
+    padding:25px;
+
     border-radius:10px;
+
     text-align:center;
+
+    margin-bottom:30px;
 }
+
+.error-message strong{
+    display:block;
+
+    margin-bottom:8px;
+}
+
+
+/* ==============================
+   INFORMATION
+============================== */
 
 .info-section{
     background:white;
@@ -326,26 +498,42 @@ section{
 
 .info-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
     gap:25px;
 }
 
 .info-box{
     padding:30px;
+
     border-radius:12px;
+
     background:#f8f9fc;
-    border-left:5px solid #0066ff;
+
+    border-left:
+    5px solid #0066ff;
 }
 
 .info-box h3{
     color:#005bea;
+
     margin-bottom:10px;
 }
 
+
+/* ==============================
+   FOOTER
+============================== */
+
 footer{
     background:#101820;
+
     color:white;
+
     padding:45px 20px;
+
     text-align:center;
 }
 
@@ -357,23 +545,45 @@ footer p{
     color:#ccc;
 }
 
+
+/* ==============================
+   TOP BUTTON
+============================== */
+
 #topBtn{
     display:none;
+
     position:fixed;
+
     bottom:25px;
     right:25px;
+
     width:50px;
     height:50px;
+
     border:none;
+
     border-radius:50%;
+
     background:#0066ff;
+
     color:white;
+
     font-size:22px;
+
     cursor:pointer;
-    box-shadow:0 5px 15px rgba(0,0,0,.25);
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.25);
+
+    z-index:998;
 }
 
-/* Mobile */
+
+/* ==============================
+   MOBILE
+============================== */
+
 @media(max-width:768px){
 
     nav{
@@ -391,15 +601,24 @@ footer p{
 
     nav ul{
         display:none;
+
         position:absolute;
+
         top:70px;
         left:0;
+
         width:100%;
+
         background:white;
+
         flex-direction:column;
+
         padding:20px;
+
         gap:15px;
-        box-shadow:0 5px 15px rgba(0,0,0,.10);
+
+        box-shadow:
+        0 5px 15px rgba(0,0,0,.10);
     }
 
     nav ul.active{
@@ -425,125 +644,221 @@ footer p{
     .location-title{
         font-size:24px;
     }
+
+    .document-card{
+        padding:22px;
+    }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
+
+<!-- ==============================
+     HEADER
+============================== -->
+
 <header>
+
 <nav>
 
 <div class="logo-area">
-<img src="images/company-logo.png"
-     alt="SLLUMAX Company Logo"
-     class="company-logo">
 
-<div class="company-name">SLLUMAX</div>
+<img
+src="images/company-logo.png"
+alt="SLLUMAX Company Logo"
+class="company-logo"
+>
+
+<div class="company-name">
+SLLUMAX
 </div>
 
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
+</div>
+
+
+<div
+class="menu-btn"
+onclick="toggleMenu()"
+>
+☰
+</div>
+
 
 <ul id="menu">
-<li><a href="#home">Home</a></li>
-<li><a href="#policies">Policies</a></li>
-<li><a href="#documents">Documents</a></li>
-<li><a href="#information">Information</a></li>
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#policies">Policies</a>
+</li>
+
+<li>
+<a href="#documents">Documents</a>
+</li>
+
+<li>
+<a href="#information">Information</a>
+</li>
+
 </ul>
 
 </nav>
+
 </header>
 
 
-<!-- HERO -->
 
-<section class="hero" id="home">
+<!-- ==============================
+     HERO
+============================== -->
+
+<section
+class="hero"
+id="home"
+>
 
 <div class="hero-content">
 
-<h1>SLLUMAX Company Policies</h1>
-
-<p>Welcome to the SLLUMAX Policy Portal</p>
+<h1>
+SLLUMAX Company Policies
+</h1>
 
 <p>
-Access important company policies, guidelines,
-safety information and risk management documents.
+Welcome to the SLLUMAX Policy Portal
 </p>
 
-<a href="#policies" class="btn">View Policies</a>
+<p>
+Access important company policies,
+guidelines, safety information and
+risk management documents.
+</p>
+
+<a
+href="#policies"
+class="btn"
+>
+View Policies
+</a>
 
 </div>
 
 </section>
 
 
-<!-- POLICY CATEGORIES -->
+
+<!-- ==============================
+     POLICY CATEGORIES
+============================== -->
 
 <section id="policies">
 
 <div class="container">
 
-<h2 class="section-title">Our Policies</h2>
+<h2 class="section-title">
+Our Policies
+</h2>
 
 <p class="section-description">
-SLLUMAX is committed to maintaining a safe,
-professional and responsible working environment.
+SLLUMAX is committed to maintaining a
+safe, professional and responsible
+working environment.
 </p>
+
 
 <div class="policy-grid">
 
+
+<!-- PUNE -->
+
 <div class="policy-card">
 
-<div class="policy-icon">👥</div>
+<div class="policy-icon">
+📍
+</div>
 
-<h3>Pune Policy</h3>
+<h3>
+Pune Policy
+</h3>
 
 <p>
-Access all company policies and documents
-applicable to the Pune location.
+Access all company policies and
+documents applicable to the
+Pune location.
 </p>
 
-<a href="#pune-policy" class="view-btn">
+<a
+href="#pune-policy"
+class="view-btn"
+>
 View Policy
 </a>
 
 </div>
 
 
+<!-- CHENNAI -->
+
 <div class="policy-card">
 
-<div class="policy-icon">🦺</div>
+<div class="policy-icon">
+🏙️
+</div>
 
-<h3>Chennai Policy</h3>
+<h3>
+Chennai Policy
+</h3>
 
 <p>
-Access all company policies and documents
-applicable to the Chennai location.
+Access all company policies and
+documents applicable to the
+Chennai location.
 </p>
 
-<a href="#chennai-policy" class="view-btn">
+<a
+href="#chennai-policy"
+class="view-btn"
+>
 View Policy
 </a>
 
 </div>
 
 
+<!-- AP -->
+
 <div class="policy-card">
 
-<div class="policy-icon">🛡️</div>
+<div class="policy-icon">
+🛡️
+</div>
 
-<h3>AP Policy</h3>
+<h3>
+AP Policy
+</h3>
 
 <p>
-Access all company policies and documents
-applicable to the Andhra Pradesh location.
+Access all company policies and
+documents applicable to the
+Andhra Pradesh location.
 </p>
 
-<a href="#ap-policy" class="view-btn">
+<a
+href="#ap-policy"
+class="view-btn"
+>
 View Policy
 </a>
 
 </div>
+
 
 </div>
 
@@ -552,21 +867,33 @@ View Policy
 </section>
 
 
-<!-- DOCUMENT CENTER -->
 
-<section class="policy-section" id="documents">
+<!-- ==============================
+     DOCUMENT CENTER
+============================== -->
+
+<section
+class="policy-section"
+id="documents"
+>
 
 <div class="container">
+
 
 <h2 class="section-title">
 Policy Document Center
 </h2>
 
+
 <p class="section-description">
-All PDF documents are automatically loaded
+PDF documents are automatically loaded
 from the SLLUMAX GitHub repository.
+Upload a new PDF to the appropriate
+folder and it will appear here.
 </p>
 
+
+<!-- SEARCH -->
 
 <div class="search-box">
 
@@ -574,25 +901,54 @@ from the SLLUMAX GitHub repository.
 type="text"
 id="policySearch"
 placeholder="Search policies..."
-onkeyup="searchPolicies()">
+oninput="searchPolicies()"
+>
 
 </div>
 
 
-<div id="loading" class="loading">
+<!-- LOADING -->
+
+<div
+id="loading"
+class="loading"
+>
+
+<div class="loading-spinner"></div>
+
 Loading policy documents...
+
 </div>
 
 
-<div id="error" class="error-message" style="display:none;">
+<!-- ERROR -->
+
+<div
+id="error"
+class="error-message"
+style="display:none;"
+>
+
+<strong>
 Unable to load policy documents.
-Please check the GitHub repository settings.
+</strong>
+
+<span id="errorText">
+Please check your GitHub repository.
+</span>
+
 </div>
 
 
-<!-- PUNE -->
 
-<div class="location-section" id="pune-policy">
+<!-- ==============================
+     PUNE
+============================== -->
+
+<div
+class="location-section"
+id="pune-policy"
+>
 
 <h3 class="location-title">
 📍 Pune Policy
@@ -600,41 +956,56 @@ Please check the GitHub repository settings.
 
 <div
 class="policy-list"
-id="punePolicyList">
+id="punePolicyList"
+>
 
 </div>
 
 </div>
 
 
-<!-- CHENNAI -->
 
-<div class="location-section" id="chennai-policy">
+<!-- ==============================
+     CHENNAI
+============================== -->
+
+<div
+class="location-section"
+id="chennai-policy"
+>
 
 <h3 class="location-title">
-📍 Chennai Policy
+🏙️ Chennai Policy
 </h3>
 
 <div
 class="policy-list"
-id="chennaiPolicyList">
+id="chennaiPolicyList"
+>
 
 </div>
 
 </div>
 
 
-<!-- AP -->
 
-<div class="location-section" id="ap-policy">
+<!-- ==============================
+     AP
+============================== -->
+
+<div
+class="location-section"
+id="ap-policy"
+>
 
 <h3 class="location-title">
-📍 AP Policy
+🛡️ AP Policy
 </h3>
 
 <div
 class="policy-list"
-id="apPolicyList">
+id="apPolicyList"
+>
 
 </div>
 
@@ -646,9 +1017,15 @@ id="apPolicyList">
 </section>
 
 
-<!-- INFORMATION -->
 
-<section class="info-section" id="information">
+<!-- ==============================
+     INFORMATION
+============================== -->
+
+<section
+class="info-section"
+id="information"
+>
 
 <div class="container">
 
@@ -656,16 +1033,21 @@ id="apPolicyList">
 Policy Information
 </h2>
 
+
 <div class="info-grid">
 
+
 <div class="info-box">
 
-<h3>Policy Compliance</h3>
+<h3>
+Policy Compliance
+</h3>
 
 <p>
-All employees and relevant stakeholders are expected
-to understand and comply with applicable SLLUMAX
-policies and procedures.
+All employees and relevant stakeholders
+are expected to understand and comply
+with applicable SLLUMAX policies and
+procedures.
 </p>
 
 </div>
@@ -673,12 +1055,15 @@ policies and procedures.
 
 <div class="info-box">
 
-<h3>Document Control</h3>
+<h3>
+Document Control
+</h3>
 
 <p>
-Employees should always refer to the latest approved
-version of each policy document available through
-the official policy portal.
+Employees should always refer to the
+latest approved version of each policy
+document available through the official
+policy portal.
 </p>
 
 </div>
@@ -686,15 +1071,19 @@ the official policy portal.
 
 <div class="info-box">
 
-<h3>Policy Review</h3>
+<h3>
+Policy Review
+</h3>
 
 <p>
-Company policies may be reviewed and updated from
-time to time based on business requirements,
-regulatory requirements and organizational needs.
+Company policies may be reviewed and
+updated from time to time based on
+business requirements, regulatory
+requirements and organizational needs.
 </p>
 
 </div>
+
 
 </div>
 
@@ -703,11 +1092,16 @@ regulatory requirements and organizational needs.
 </section>
 
 
-<!-- FOOTER -->
+
+<!-- ==============================
+     FOOTER
+============================== -->
 
 <footer>
 
-<h2>SLLUMAX</h2>
+<h2>
+SLLUMAX
+</h2>
 
 <p>
 Company Policies • Pune • Chennai • AP
@@ -722,45 +1116,51 @@ Company Policies • Pune • Chennai • AP
 </footer>
 
 
-<button id="topBtn" onclick="topFunction()">↑</button>
+
+<!-- TOP BUTTON -->
+
+<button
+id="topBtn"
+onclick="topFunction()"
+>
+↑
+</button>
+
 
 
 <script>
 
-/*
-=====================================================
-GITHUB CONFIGURATION
-=====================================================
+/* =====================================================
+   SLLUMAX GITHUB CONFIGURATION
+===================================================== */
 
-CHANGE THESE TWO VALUES.
+const GITHUB_OWNER = "babudevadurag-dot";
 
-Example:
+const GITHUB_REPO = "sllumax";
 
-GitHub repository:
-https://github.com/mycompany/sllumax
+const GITHUB_BRANCH = "main";
 
-OWNER = mycompany
-REPO  = sllumax
 
-=====================================================
-*/
-
-const GITHUB_OWNER = "YOUR-GITHUB-USERNAME";
-const GITHUB_REPO = "YOUR-REPOSITORY-NAME";
+/* =====================================================
+   POLICY FOLDERS
+===================================================== */
 
 const POLICY_FOLDERS = {
 
     pune: {
+        name: "Pune Policy",
         folder: "Pune-Policy",
         element: "punePolicyList"
     },
 
     chennai: {
+        name: "Chennai Policy",
         folder: "Chennai-Policy",
         element: "chennaiPolicyList"
     },
 
     ap: {
+        name: "AP Policy",
         folder: "AP-Policy",
         element: "apPolicyList"
     }
@@ -768,200 +1168,559 @@ const POLICY_FOLDERS = {
 };
 
 
-/*
-=====================================================
-LOAD PDF FILES FROM GITHUB
-=====================================================
-*/
+/* =====================================================
+   GITHUB API BASE URL
+===================================================== */
+
+const GITHUB_API =
+    "https://api.github.com/repos/" +
+    GITHUB_OWNER +
+    "/" +
+    GITHUB_REPO +
+    "/contents/";
+
+
+/* =====================================================
+   LOAD ALL POLICY FOLDERS
+===================================================== */
 
 async function loadPolicies(){
 
-    document.getElementById("loading").style.display = "block";
+    const loading =
+        document.getElementById("loading");
+
+    const error =
+        document.getElementById("error");
+
+    const errorText =
+        document.getElementById("errorText");
+
+
+    loading.style.display = "block";
+
+    error.style.display = "none";
+
 
     try{
 
-        for(const key in POLICY_FOLDERS){
+        const results =
+            await Promise.all([
 
-            const policy = POLICY_FOLDERS[key];
+                loadPolicyFolder(
+                    POLICY_FOLDERS.pune
+                ),
 
-            await loadPolicyFolder(
-                policy.folder,
-                policy.element
+                loadPolicyFolder(
+                    POLICY_FOLDERS.chennai
+                ),
+
+                loadPolicyFolder(
+                    POLICY_FOLDERS.ap
+                )
+
+            ]);
+
+
+        const hasError =
+            results.some(
+                result => result === false
+            );
+
+
+        if(hasError){
+
+            throw new Error(
+                "One or more policy folders could not be loaded."
             );
 
         }
 
-        document.getElementById("loading").style.display = "none";
+
+        loading.style.display = "none";
+
 
     }
-    catch(error){
+    catch(errorObject){
 
-        console.error(error);
-
-        document.getElementById("loading").style.display = "none";
-
-        document.getElementById("error").style.display = "block";
-
-    }
-
-}
-
-
-/*
-=====================================================
-LOAD ONE FOLDER
-=====================================================
-*/
-
-async function loadPolicyFolder(folderName, elementId){
-
-    const apiURL =
-        `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/pdf/${encodeURIComponent(folderName)}`;
-
-    const response = await fetch(apiURL);
-
-    if(!response.ok){
-
-        throw new Error(
-            `Unable to load ${folderName}`
+        console.error(
+            "SLLUMAX PDF ERROR:",
+            errorObject
         );
 
-    }
 
-    const files = await response.json();
+        loading.style.display = "none";
 
-    const container =
-        document.getElementById(elementId);
+        error.style.display = "block";
 
-    container.innerHTML = "";
-
-
-    /*
-    Only display PDF files
-    */
-
-    const pdfFiles = files.filter(
-        file =>
-            file.type === "file" &&
-            file.name.toLowerCase().endsWith(".pdf")
-    );
-
-
-    if(pdfFiles.length === 0){
-
-        container.innerHTML = `
-            <div class="no-pdf">
-                No PDF documents available yet.
-            </div>
-        `;
-
-        return;
+        errorText.innerText =
+            errorObject.message ||
+            "Unable to connect to GitHub.";
 
     }
-
-
-    /*
-    Create card for every PDF
-    */
-
-    pdfFiles.forEach(file => {
-
-        const pdfURL = file.download_url;
-
-        const cleanName =
-            file.name
-                .replace(/\.pdf$/i, "")
-                .replace(/[-_]/g, " ");
-
-
-        const card =
-            document.createElement("div");
-
-        card.className =
-            "document-card policy-document";
-
-
-        card.innerHTML = `
-
-            <h3>📄 ${cleanName}</h3>
-
-            <p>
-                SLLUMAX Policy Document
-            </p>
-
-            <a
-                href="${pdfURL}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="view-btn">
-                View
-            </a>
-
-            <a
-                href="${pdfURL}"
-                download
-                class="download-btn">
-                Download
-            </a>
-
-        `;
-
-
-        container.appendChild(card);
-
-    });
 
 }
 
 
-/*
-=====================================================
-SEARCH
-=====================================================
-*/
+/* =====================================================
+   LOAD A POLICY FOLDER
+===================================================== */
+
+async function loadPolicyFolder(policy){
+
+    const container =
+        document.getElementById(
+            policy.element
+        );
+
+
+    /*
+       Encode folder name safely.
+    */
+
+    const folderPath =
+        "pdf/" +
+        policy.folder;
+
+
+    const apiURL =
+        GITHUB_API +
+        folderPath.split("/").map(
+            encodeURIComponent
+        ).join("/") +
+        "?ref=" +
+        encodeURIComponent(
+            GITHUB_BRANCH
+        );
+
+
+    try{
+
+        const response =
+            await fetch(
+                apiURL,
+                {
+                    method:"GET",
+                    headers:{
+                        "Accept":
+                        "application/vnd.github+json"
+                    },
+                    cache:"no-store"
+                }
+            );
+
+
+        if(!response.ok){
+
+            let message =
+                "GitHub returned HTTP " +
+                response.status;
+
+
+            if(response.status === 404){
+
+                message =
+                    policy.name +
+                    " folder was not found.";
+
+            }
+
+            if(response.status === 403){
+
+                message =
+                    "GitHub API request limit reached.";
+
+            }
+
+
+            throw new Error(message);
+
+        }
+
+
+        const files =
+            await response.json();
+
+
+        /*
+           Make sure GitHub returned an array.
+        */
+
+        if(!Array.isArray(files)){
+
+            throw new Error(
+                "Invalid GitHub folder response."
+            );
+
+        }
+
+
+        /*
+           Only PDF files.
+        */
+
+        const pdfFiles =
+            files
+            .filter(
+                file =>
+                    file.type === "file" &&
+                    typeof file.name === "string" &&
+                    file.name
+                    .toLowerCase()
+                    .endsWith(".pdf")
+            )
+            .sort(
+                (a,b) =>
+                    a.name
+                    .localeCompare(
+                        b.name,
+                        undefined,
+                        {
+                            numeric:true,
+                            sensitivity:"base"
+                        }
+                    )
+            );
+
+
+        /*
+           Clear existing cards.
+        */
+
+        container.innerHTML = "";
+
+
+        /*
+           No PDF found.
+        */
+
+        if(pdfFiles.length === 0){
+
+            container.innerHTML = `
+
+                <div class="no-pdf">
+
+                    No PDF documents available
+                    in the ${escapeHTML(policy.name)}
+                    folder yet.
+
+                </div>
+
+            `;
+
+            return true;
+
+        }
+
+
+        /*
+           Create cards.
+        */
+
+        pdfFiles.forEach(
+            file => {
+
+                createPDFCard(
+                    file,
+                    container,
+                    policy.name
+                );
+
+            }
+        );
+
+
+        return true;
+
+    }
+    catch(errorObject){
+
+        console.error(
+            policy.name +
+            " loading error:",
+            errorObject
+        );
+
+
+        container.innerHTML = `
+
+            <div class="no-pdf">
+
+                Unable to load
+                ${escapeHTML(policy.name)}
+                documents.
+
+                <br><br>
+
+                <small>
+                    ${escapeHTML(
+                        errorObject.message
+                    )}
+                </small>
+
+            </div>
+
+        `;
+
+
+        return false;
+
+    }
+
+}
+
+
+/* =====================================================
+   CREATE PDF CARD
+===================================================== */
+
+function createPDFCard(
+    file,
+    container,
+    policyName
+){
+
+    /*
+       GitHub provides download_url
+       for public repository files.
+    */
+
+    const pdfURL =
+        file.download_url ||
+        (
+            "https://github.com/" +
+            GITHUB_OWNER +
+            "/" +
+            GITHUB_REPO +
+            "/raw/refs/heads/" +
+            GITHUB_BRANCH +
+            "/" +
+            file.path
+            .split("/")
+            .map(encodeURIComponent)
+            .join("/")
+        );
+
+
+    /*
+       Convert filename into
+       readable title.
+    */
+
+    let cleanName =
+        file.name
+        .replace(
+            /\.pdf$/i,
+            ""
+        )
+        .replace(
+            /[-_]+/g,
+            " "
+        )
+        .replace(
+            /\s+/g,
+            " "
+        )
+        .trim();
+
+
+    /*
+       Capitalize first letters.
+    */
+
+    cleanName =
+        cleanName
+        .replace(
+            /\b\w/g,
+            letter =>
+                letter.toUpperCase()
+        );
+
+
+    /*
+       Create card.
+    */
+
+    const card =
+        document.createElement(
+            "div"
+        );
+
+
+    card.className =
+        "document-card policy-document";
+
+
+    /*
+       Search text.
+    */
+
+    card.dataset.search =
+        (
+            cleanName +
+            " " +
+            policyName
+        ).toLowerCase();
+
+
+    /*
+       Card HTML.
+    */
+
+    card.innerHTML = `
+
+        <h3>
+            📄 ${escapeHTML(cleanName)}
+        </h3>
+
+        <p>
+            ${escapeHTML(policyName)}
+            Document
+        </p>
+
+        <a
+            href="${escapeAttribute(pdfURL)}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="view-btn"
+        >
+            View
+        </a>
+
+        <a
+            href="${escapeAttribute(pdfURL)}"
+            download
+            class="download-btn"
+        >
+            Download
+        </a>
+
+    `;
+
+
+    container.appendChild(card);
+
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
 
 function searchPolicies(){
 
     const input =
         document
-        .getElementById("policySearch")
+        .getElementById(
+            "policySearch"
+        )
         .value
-        .toUpperCase()
+        .toLowerCase()
         .trim();
 
 
     const cards =
-        document.getElementsByClassName(
-            "policy-document"
+        document.querySelectorAll(
+            ".policy-document"
         );
 
 
-    for(let i = 0; i < cards.length; i++){
+    cards.forEach(
+        card => {
 
-        const title =
-            cards[i]
-            .getElementsByTagName("h3")[0];
-
-
-        const text =
-            title.innerText.toUpperCase();
+            const searchText =
+                card.dataset.search ||
+                card.innerText
+                .toLowerCase();
 
 
-        cards[i].style.display =
-            text.indexOf(input) > -1
-            ? "block"
-            : "none";
+            if(
+                searchText
+                .includes(input)
+            ){
 
-    }
+                card.style.display =
+                    "";
+
+            }
+            else{
+
+                card.style.display =
+                    "none";
+
+            }
+
+        }
+    );
 
 }
 
 
-/*
-=====================================================
-MOBILE MENU
-=====================================================
-*/
+/* =====================================================
+   ESCAPE HTML
+   Prevents filenames from injecting HTML.
+===================================================== */
+
+function escapeHTML(value){
+
+    return String(value)
+    .replace(
+        /&/g,
+        "&amp;"
+    )
+    .replace(
+        /</g,
+        "&lt;"
+    )
+    .replace(
+        />/g,
+        "&gt;"
+    )
+    .replace(
+        /"/g,
+        "&quot;"
+    )
+    .replace(
+        /'/g,
+        "&#039;"
+    );
+
+}
+
+
+/* =====================================================
+   ESCAPE ATTRIBUTE
+===================================================== */
+
+function escapeAttribute(value){
+
+    return String(value)
+    .replace(
+        /&/g,
+        "&amp;"
+    )
+    .replace(
+        /"/g,
+        "&quot;"
+    )
+    .replace(
+        /'/g,
+        "&#039;"
+    )
+    .replace(
+        /</g,
+        "&lt;"
+    )
+    .replace(
+        />/g,
+        "&gt;"
+    );
+
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
 
 function toggleMenu(){
 
@@ -975,66 +1734,87 @@ function toggleMenu(){
 
 document
 .querySelectorAll("#menu a")
-.forEach(function(link){
+.forEach(
+    function(link){
 
-    link.addEventListener(
-        "click",
-        function(){
+        link.addEventListener(
+            "click",
+            function(){
 
-            document
-            .getElementById("menu")
-            .classList
-            .remove("active");
+                document
+                .getElementById("menu")
+                .classList
+                .remove("active");
 
-        }
+            }
+        );
+
+    }
+);
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+const topButton =
+    document.getElementById(
+        "topBtn"
     );
 
-});
 
+window.addEventListener(
+    "scroll",
+    function(){
 
-/*
-=====================================================
-BACK TO TOP
-=====================================================
-*/
-
-let topButton =
-    document.getElementById("topBtn");
-
-
-window.onscroll = function(){
-
-    topButton.style.display =
-        (
+        if(
             document.body.scrollTop > 300 ||
             document.documentElement.scrollTop > 300
-        )
-        ? "block"
-        : "none";
+        ){
 
-};
+            topButton.style.display =
+                "block";
+
+        }
+        else{
+
+            topButton.style.display =
+                "none";
+
+        }
+
+    }
+);
 
 
 function topFunction(){
 
     window.scrollTo({
+
         top:0,
+
         behavior:"smooth"
+
     });
 
 }
 
 
-/*
-=====================================================
-START
-=====================================================
-*/
+/* =====================================================
+   START APPLICATION
+===================================================== */
 
-loadPolicies();
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+        loadPolicies();
+
+    }
+);
 
 </script>
 
 </body>
+
 </html>
-```
