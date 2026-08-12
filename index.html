@@ -3,1725 +3,1011 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<title>SL India - Company Policies</title>
+    <title>SL India | Company Policy Portal</title>
 
-<meta
-    name="description"
-    content="SL India Company Policy Portal - Pune, Chennai and AP Policy Documents"
->
+    <meta
+        name="description"
+        content="SL India Company Policy Portal - Pune, Chennai and AP"
+    >
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="theme-color" content="#0759d7">
 
-<link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-    crossorigin
->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
->
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
-<style>
 
-/* =====================================================
-   GLOBAL
-===================================================== */
+    <style>
 
-:root{
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
 
-    --primary:#1769ff;
-    --primary-dark:#0d55d9;
-    --secondary:#00b7ff;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    --dark:#101828;
-    --text:#344054;
-    --muted:#667085;
+        html {
+            scroll-behavior: smooth;
+        }
 
-    --background:#f6f8fc;
-    --white:#ffffff;
+        body {
+            font-family: "Inter", sans-serif;
+            background: #f5f7fb;
+            color: #172033;
+            line-height: 1.6;
+        }
 
-    --border:#e4e7ec;
+        a {
+            text-decoration: none;
+        }
 
-    --blue-light:#eef5ff;
-    --blue-border:#d7e6ff;
+        button {
+            font-family: inherit;
+        }
 
-    --danger:#e53935;
 
-    --shadow-sm:
-        0 3px 12px rgba(16,24,40,.05);
+        /* =====================================================
+           HEADER
+        ===================================================== */
 
-    --shadow-md:
-        0 10px 28px rgba(16,24,40,.09);
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 72px;
 
-    --radius:14px;
-}
+            background: rgba(255, 255, 255, 0.96);
 
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
 
-*{
+            border-bottom: 1px solid #e5eaf2;
 
-    margin:0;
+            box-shadow:
+                0 4px 20px rgba(15, 23, 42, 0.06);
 
-    padding:0;
+            z-index: 1000;
+        }
 
-    box-sizing:border-box;
+        .navbar {
+            width: 100%;
+            max-width: 1180px;
+            height: 72px;
 
-}
+            margin: auto;
+            padding: 0 22px;
 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-html{
 
-    scroll-behavior:smooth;
+        /* =====================================================
+           LOGO
+        ===================================================== */
 
-}
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 11px;
 
+            color: #0759d7;
+        }
 
-body{
+        .company-logo {
+            width: 45px;
+            height: 45px;
 
-    font-family:'Inter',sans-serif;
+            object-fit: contain;
+            display: block;
 
-    background:var(--background);
+            border-radius: 8px;
+        }
 
-    color:var(--text);
+        .company-name {
+            font-size: 23px;
+            font-weight: 800;
+            letter-spacing: -0.6px;
+        }
 
-    line-height:1.6;
 
-}
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
 
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 6px;
 
-a{
+            list-style: none;
+        }
 
-    text-decoration:none;
+        .nav-links > li {
+            position: relative;
+        }
 
-}
+        .nav-link,
+        .dropdown-button {
+            border: none;
+            background: transparent;
 
+            color: #334155;
 
-button,
-input{
+            padding: 10px 15px;
 
-    font-family:inherit;
+            border-radius: 8px;
 
-}
+            font-size: 14px;
+            font-weight: 600;
 
+            cursor: pointer;
 
-/* =====================================================
-   HEADER
-===================================================== */
+            transition: 0.25s ease;
+        }
 
-header{
+        .nav-link:hover,
+        .dropdown-button:hover {
+            color: #0759d7;
+            background: #eef5ff;
+        }
 
-    position:fixed;
 
-    top:0;
+        /* =====================================================
+           POLICY DROPDOWN
+        ===================================================== */
 
-    left:0;
+        .dropdown-button {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
 
-    width:100%;
+        .dropdown-arrow {
+            font-size: 10px;
+            transition: 0.25s ease;
+        }
 
-    height:74px;
+        .policy-dropdown.open .dropdown-arrow {
+            transform: rotate(180deg);
+        }
 
-    background:
-        rgba(255,255,255,.95);
+        .dropdown-menu {
+            position: absolute;
 
-    backdrop-filter:blur(14px);
+            top: calc(100% + 9px);
+            right: 0;
 
-    -webkit-backdrop-filter:blur(14px);
+            width: 220px;
 
-    border-bottom:
-        1px solid rgba(228,231,236,.8);
+            background: #ffffff;
 
-    box-shadow:
-        0 4px 20px rgba(16,24,40,.06);
+            border: 1px solid #e4e9f1;
 
-    z-index:1000;
+            border-radius: 12px;
 
-}
+            padding: 7px;
 
+            box-shadow:
+                0 16px 40px rgba(15, 23, 42, 0.13);
 
-nav{
+            opacity: 0;
+            visibility: hidden;
 
-    max-width:1200px;
+            transform: translateY(-7px);
 
-    height:74px;
+            transition:
+                opacity 0.2s ease,
+                transform 0.2s ease,
+                visibility 0.2s ease;
+        }
 
-    margin:auto;
+        .policy-dropdown.open .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
 
-    padding:0 22px;
+            transform: translateY(0);
+        }
 
-    display:flex;
+        .policy-option {
+            width: 100%;
 
-    align-items:center;
+            display: flex;
+            align-items: center;
+            gap: 10px;
 
-    justify-content:space-between;
+            border: none;
+            background: transparent;
 
-}
+            padding: 11px 12px;
 
+            border-radius: 8px;
 
-/* =====================================================
-   BRAND
-===================================================== */
+            color: #334155;
 
-.logo-area{
+            text-align: left;
 
-    display:flex;
+            font-size: 13px;
+            font-weight: 600;
 
-    align-items:center;
+            cursor: pointer;
 
-    gap:11px;
+            transition: 0.2s ease;
+        }
 
-}
+        .policy-option:hover {
+            background: #eef5ff;
+            color: #0759d7;
+        }
 
+        .policy-option-icon {
+            width: 30px;
+            height: 30px;
 
-.company-logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    width:45px;
+            background: #f0f6ff;
 
-    height:45px;
+            border-radius: 7px;
 
-    object-fit:contain;
+            font-size: 15px;
+        }
 
-}
 
+        /* =====================================================
+           MOBILE MENU
+        ===================================================== */
 
-.company-name{
+        .mobile-menu-button {
+            display: none;
 
-    font-size:23px;
+            border: none;
+            background: transparent;
 
-    font-weight:800;
+            color: #334155;
 
-    letter-spacing:-.6px;
+            font-size: 27px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #1769ff,
-            #00aef5
-        );
+            cursor: pointer;
+        }
 
-    -webkit-background-clip:text;
 
-    background-clip:text;
+        /* =====================================================
+           HERO
+        ===================================================== */
 
-    color:transparent;
+        .hero {
+            min-height: 610px;
 
-}
+            padding:
+                125px
+                20px
+                90px;
 
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-/* =====================================================
-   NAVIGATION
-===================================================== */
+            text-align: center;
 
-.nav-links{
+            color: white;
 
-    display:flex;
+            position: relative;
+            overflow: hidden;
 
-    align-items:center;
+            background:
+                radial-gradient(
+                    circle at 10% 20%,
+                    rgba(255,255,255,0.16),
+                    transparent 28%
+                ),
 
-    gap:5px;
+                radial-gradient(
+                    circle at 90% 80%,
+                    rgba(255,255,255,0.13),
+                    transparent 30%
+                ),
 
-    list-style:none;
+                linear-gradient(
+                    135deg,
+                    #0346c7 0%,
+                    #0759d7 45%,
+                    #00a9d9 100%
+                );
+        }
 
-}
+        .hero-content {
+            max-width: 850px;
+        }
 
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
 
-.nav-links > li{
+            padding: 7px 15px;
 
-    position:relative;
+            border:
+                1px solid rgba(255,255,255,0.28);
 
-}
+            background:
+                rgba(255,255,255,0.10);
 
+            backdrop-filter: blur(8px);
 
-.nav-link{
+            border-radius: 50px;
 
-    display:flex;
+            font-size: 12px;
+            font-weight: 600;
 
-    align-items:center;
+            margin-bottom: 22px;
+        }
 
-    gap:6px;
+        .hero h1 {
+            font-size: 58px;
+            line-height: 1.08;
 
-    padding:9px 14px;
+            letter-spacing: -2.5px;
 
-    color:#344054;
+            font-weight: 800;
 
-    font-size:14px;
+            margin-bottom: 20px;
+        }
 
-    font-weight:600;
+        .hero-description {
+            max-width: 700px;
 
-    border-radius:8px;
+            margin: auto;
 
-    transition:.2s ease;
+            color: rgba(255,255,255,0.90);
 
-}
+            font-size: 17px;
+            line-height: 1.7;
+        }
 
+        .hero-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
 
-.nav-link:hover{
+            margin-top: 28px;
 
-    color:var(--primary);
+            padding: 13px 24px;
 
-    background:#f1f6ff;
+            background: white;
+            color: #0759d7;
 
-}
+            border-radius: 8px;
 
+            font-size: 13px;
+            font-weight: 700;
 
-.dropdown-arrow{
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.13);
 
-    font-size:10px;
+            transition: 0.25s ease;
+        }
 
-    transition:.2s ease;
+        .hero-button:hover {
+            transform: translateY(-2px);
 
-}
+            box-shadow:
+                0 12px 30px rgba(0,0,0,0.20);
+        }
 
 
-.dropdown:hover
-.dropdown-arrow{
+        /* =====================================================
+           POLICY AREA
+        ===================================================== */
 
-    transform:rotate(180deg);
+        .policy-section {
+            min-height: 480px;
 
-}
+            padding: 78px 20px;
 
+            background: #f5f7fb;
+        }
 
-/* =====================================================
-   DROPDOWN
-===================================================== */
+        .container {
+            width: 100%;
+            max-width: 1100px;
 
-.dropdown-menu{
+            margin: auto;
+        }
 
-    position:absolute;
 
-    top:calc(100% + 9px);
+        /* =====================================================
+           PLACEHOLDER
+        ===================================================== */
 
-    right:0;
+        .policy-placeholder {
+            max-width: 580px;
 
-    width:220px;
+            margin: 0 auto;
 
-    padding:7px;
+            padding: 48px 30px;
 
-    background:white;
+            background: white;
 
-    border:
-        1px solid var(--border);
+            border:
+                1px solid #e5eaf2;
 
-    border-radius:12px;
+            border-radius: 16px;
 
-    box-shadow:
-        0 15px 40px
-        rgba(16,24,40,.13);
+            text-align: center;
 
-    opacity:0;
+            box-shadow:
+                0 8px 30px rgba(15,23,42,0.05);
+        }
 
-    visibility:hidden;
+        .placeholder-icon {
+            width: 60px;
+            height: 60px;
 
-    transform:translateY(6px);
+            margin: 0 auto 18px;
 
-    transition:.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-}
+            border-radius: 50%;
 
+            background: #eef5ff;
 
-.dropdown:hover
-.dropdown-menu{
+            color: #0759d7;
 
-    opacity:1;
+            font-size: 25px;
+        }
 
-    visibility:visible;
+        .policy-placeholder h2 {
+            color: #172033;
 
-    transform:translateY(0);
+            font-size: 22px;
 
-}
+            margin-bottom: 8px;
+        }
 
+        .policy-placeholder p {
+            color: #64748b;
 
-.dropdown-menu button{
+            font-size: 13px;
+        }
 
-    width:100%;
 
-    border:none;
+        /* =====================================================
+           LOCATION HEADER
+        ===================================================== */
 
-    background:transparent;
+        .location-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
-    display:flex;
+            margin-bottom: 25px;
 
-    align-items:center;
+            padding-bottom: 17px;
 
-    gap:9px;
+            border-bottom:
+                1px solid #dfe6f0;
+        }
 
-    padding:11px 12px;
+        .location-heading {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-    border-radius:8px;
+        .location-icon {
+            width: 44px;
+            height: 44px;
 
-    color:#344054;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    font-size:13px;
+            background: #eaf3ff;
 
-    font-weight:500;
+            border-radius: 10px;
 
-    text-align:left;
+            font-size: 20px;
+        }
 
-    cursor:pointer;
+        .location-header h2 {
+            color: #172033;
 
-    transition:.2s ease;
+            font-size: 24px;
 
-}
+            line-height: 1.3;
 
+            letter-spacing: -0.5px;
+        }
 
-.dropdown-menu button:hover{
+        .location-header p {
+            margin-top: 3px;
 
-    background:#f1f6ff;
+            color: #64748b;
 
-    color:var(--primary);
+            font-size: 12px;
+        }
 
-}
 
+        /* =====================================================
+           POLICY GRID
+        ===================================================== */
 
-/* =====================================================
-   MOBILE MENU
-===================================================== */
+        .policy-grid {
+            display: grid;
 
-.menu-btn{
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
 
-    display:none;
+            gap: 17px;
+        }
 
-    width:40px;
 
-    height:40px;
+        /* =====================================================
+           POLICY CARD
+        ===================================================== */
 
-    border:none;
+        .policy-card {
+            position: relative;
 
-    border-radius:8px;
+            overflow: hidden;
 
-    background:#eef5ff;
+            padding: 19px;
 
-    color:var(--primary);
+            background: white;
 
-    font-size:20px;
+            border:
+                1px solid #e4e9f1;
 
-    cursor:pointer;
+            border-radius: 12px;
 
-}
+            box-shadow:
+                0 4px 15px rgba(15,23,42,0.045);
 
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+        }
 
-/* =====================================================
-   HERO
-===================================================== */
+        .policy-card::before {
+            content: "";
 
-.hero{
+            position: absolute;
 
-    position:relative;
+            top: 0;
+            left: 0;
 
-    min-height:590px;
+            width: 100%;
+            height: 3px;
 
-    display:flex;
+            background:
+                linear-gradient(
+                    90deg,
+                    #0759d7,
+                    #00a9d9
+                );
+        }
 
-    justify-content:center;
+        .policy-card:hover {
+            transform: translateY(-4px);
 
-    align-items:center;
+            border-color: #c9daf4;
 
-    text-align:center;
+            box-shadow:
+                0 12px 28px rgba(15,23,42,0.09);
+        }
 
-    padding:
-        120px 20px 80px;
+        .document-icon {
+            width: 40px;
+            height: 40px;
 
-    color:white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    overflow:hidden;
+            margin-bottom: 12px;
 
-    background:
+            border-radius: 9px;
 
-        radial-gradient(
-            circle at 15% 25%,
-            rgba(255,255,255,.16),
-            transparent 28%
-        ),
+            background: #eef5ff;
 
-        radial-gradient(
-            circle at 85% 75%,
-            rgba(0,220,255,.18),
-            transparent 30%
-        ),
+            color: #0759d7;
 
-        linear-gradient(
-            135deg,
-            #0759db,
-            #1769ff 50%,
-            #00b7ff
-        );
+            font-size: 18px;
+        }
 
-}
+        .policy-card h3 {
+            color: #172033;
 
+            font-size: 15px;
+            line-height: 1.4;
 
-.hero::before{
+            margin-bottom: 5px;
+        }
 
-    content:"";
+        .file-name {
+            margin-bottom: 10px;
 
-    position:absolute;
+            color: #94a3b8;
 
-    width:450px;
+            font-family: monospace;
 
-    height:450px;
+            font-size: 11px;
+        }
 
-    border:
-        1px solid
-        rgba(255,255,255,.12);
+        .policy-card p {
+            min-height: 39px;
 
-    border-radius:50%;
+            margin-bottom: 14px;
 
-    top:-240px;
+            color: #64748b;
 
-    right:-120px;
+            font-size: 12px;
 
-}
+            line-height: 1.55;
+        }
 
+        .view-pdf {
+            width: 100%;
 
-.hero::after{
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    content:"";
+            padding: 9px 12px;
 
-    position:absolute;
+            background: #0759d7;
+            color: white;
 
-    width:320px;
+            border-radius: 7px;
 
-    height:320px;
+            font-size: 12px;
+            font-weight: 600;
 
-    border:
-        1px solid
-        rgba(255,255,255,.10);
+            transition: 0.2s ease;
+        }
 
-    border-radius:50%;
+        .view-pdf:hover {
+            background: #0448b0;
+        }
 
-    bottom:-190px;
 
-    left:-100px;
+        /* =====================================================
+           ABOUT
+        ===================================================== */
 
-}
+        .about-section {
+            padding: 78px 20px;
 
+            background: white;
+        }
 
-.hero-content{
+        .about-content {
+            max-width: 850px;
 
-    position:relative;
+            margin: auto;
 
-    z-index:2;
+            text-align: center;
+        }
 
-    max-width:850px;
+        .about-label {
+            display: inline-block;
 
-}
+            margin-bottom: 9px;
 
+            color: #0759d7;
 
-.hero-badge{
+            font-size: 11px;
+            font-weight: 700;
 
-    display:inline-flex;
+            text-transform: uppercase;
 
-    align-items:center;
+            letter-spacing: 1.5px;
+        }
 
-    gap:8px;
+        .about-content h2 {
+            margin-bottom: 14px;
 
-    padding:7px 13px;
+            color: #172033;
 
-    margin-bottom:20px;
+            font-size: 34px;
 
-    background:
-        rgba(255,255,255,.12);
+            letter-spacing: -1px;
+        }
 
-    border:
-        1px solid
-        rgba(255,255,255,.22);
+        .about-description {
+            max-width: 720px;
 
-    border-radius:50px;
+            margin: auto;
 
-    font-size:12px;
+            color: #64748b;
 
-    font-weight:600;
+            font-size: 14px;
+        }
 
-}
+        .about-grid {
+            display: grid;
 
+            grid-template-columns:
+                repeat(3, 1fr);
 
-.hero-badge span{
+            gap: 17px;
 
-    width:6px;
+            margin-top: 34px;
+        }
 
-    height:6px;
+        .about-box {
+            padding: 21px;
 
-    border-radius:50%;
+            background: #fafbfe;
 
-    background:#7dffb2;
+            border:
+                1px solid #e5eaf1;
 
-    box-shadow:
-        0 0 8px #7dffb2;
+            border-radius: 11px;
 
-}
+            text-align: left;
+        }
 
+        .about-box h3 {
+            margin-bottom: 6px;
 
-.hero h1{
+            color: #172033;
 
-    font-size:
-        clamp(40px,6vw,65px);
+            font-size: 14px;
+        }
 
-    line-height:1.08;
+        .about-box p {
+            color: #64748b;
 
-    letter-spacing:-2px;
+            font-size: 12px;
 
-    font-weight:800;
+            line-height: 1.6;
+        }
 
-    margin-bottom:20px;
 
-}
+        /* =====================================================
+           FOOTER
+        ===================================================== */
 
+        footer {
+            padding: 34px 20px;
 
-.hero p{
+            background: #101827;
 
-    max-width:680px;
+            color: white;
 
-    margin:auto;
+            text-align: center;
+        }
 
-    color:
-        rgba(255,255,255,.88);
+        footer h2 {
+            margin-bottom: 5px;
 
-    font-size:17px;
+            font-size: 20px;
+        }
 
-}
+        footer p {
+            color: #94a3b8;
 
+            font-size: 12px;
+        }
 
-/* =====================================================
-   POLICY SECTION
-===================================================== */
 
-.policy-section{
+        /* =====================================================
+           BACK TO TOP
+        ===================================================== */
 
-    background:#f6f8fc;
+        #topBtn {
+            display: none;
 
-    padding:75px 20px;
+            position: fixed;
 
-    min-height:620px;
+            right: 22px;
+            bottom: 22px;
 
-}
+            width: 44px;
+            height: 44px;
 
+            border: none;
 
-.container{
+            border-radius: 50%;
 
-    max-width:1150px;
+            background: #0759d7;
 
-    margin:auto;
+            color: white;
 
-}
+            font-size: 19px;
 
+            cursor: pointer;
 
-.policy-header{
+            box-shadow:
+                0 7px 20px rgba(0,0,0,0.20);
 
-    display:flex;
+            z-index: 900;
+        }
 
-    align-items:flex-end;
 
-    justify-content:space-between;
+        /* =====================================================
+           UTILITY
+        ===================================================== */
 
-    gap:20px;
+        .hidden {
+            display: none !important;
+        }
 
-    margin-bottom:25px;
 
-}
+        /* =====================================================
+           MOBILE
+        ===================================================== */
 
+        @media (max-width: 850px) {
 
-.section-label{
+            .policy-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
 
-    display:inline-block;
+        }
 
-    color:var(--primary);
 
-    font-size:11px;
+        @media (max-width: 768px) {
 
-    font-weight:700;
+            header,
+            .navbar {
+                height: 66px;
+            }
 
-    letter-spacing:1.4px;
+            .navbar {
+                padding: 0 17px;
+            }
 
-    text-transform:uppercase;
+            .company-logo {
+                width: 40px;
+                height: 40px;
+            }
 
-    margin-bottom:6px;
+            .company-name {
+                font-size: 20px;
+            }
 
-}
+            .mobile-menu-button {
+                display: block;
+            }
 
+            .nav-links {
+                display: none;
 
-.section-title{
+                position: absolute;
 
-    color:var(--dark);
+                top: 66px;
+                left: 0;
 
-    font-size:32px;
+                width: 100%;
 
-    line-height:1.2;
+                padding: 12px 16px 18px;
 
-    letter-spacing:-.8px;
+                flex-direction: column;
+                align-items: stretch;
 
-    margin-bottom:7px;
+                background: white;
 
-}
+                box-shadow:
+                    0 10px 25px rgba(15,23,42,0.10);
+            }
 
+            .nav-links.active {
+                display: flex;
+            }
 
-.section-description{
+            .nav-links > li {
+                width: 100%;
+            }
 
-    color:var(--muted);
+            .nav-link,
+            .dropdown-button {
+                width: 100%;
 
-    font-size:14px;
+                justify-content: flex-start;
 
-}
+                text-align: left;
+            }
 
+            .dropdown-menu {
+                position: static;
 
-.policy-count{
+                width: 100%;
 
-    padding:7px 12px;
+                display: none;
 
-    background:#eef5ff;
+                opacity: 1;
+                visibility: visible;
 
-    color:var(--primary);
+                transform: none;
 
-    border-radius:50px;
+                box-shadow: none;
 
-    font-size:12px;
+                border: none;
 
-    font-weight:700;
+                padding:
+                    4px
+                    0
+                    4px
+                    12px;
+            }
 
-    white-space:nowrap;
+            .policy-dropdown.open
+            .dropdown-menu {
+                display: block;
+            }
 
-}
+            .hero {
+                min-height: 550px;
 
+                padding:
+                    105px
+                    20px
+                    70px;
+            }
 
-/* =====================================================
-   SEARCH
-===================================================== */
+            .hero h1 {
+                font-size: 40px;
 
-.search-box{
+                letter-spacing: -1.5px;
+            }
 
-    position:relative;
+            .hero-description {
+                font-size: 14px;
+            }
 
-    max-width:650px;
+            .policy-section,
+            .about-section {
+                padding: 60px 17px;
+            }
 
-    margin:
-        0 auto 28px;
+            .policy-grid {
+                grid-template-columns: 1fr;
+            }
 
-}
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
 
+            .location-header {
+                align-items: flex-start;
+            }
 
-.search-box input{
+            .location-header h2 {
+                font-size: 21px;
+            }
 
-    width:100%;
+        }
 
-    height:46px;
-
-    padding:
-        0 18px 0 44px;
-
-    border:
-        1px solid var(--border);
-
-    border-radius:10px;
-
-    background:white;
-
-    color:var(--dark);
-
-    font-size:13px;
-
-    outline:none;
-
-    box-shadow:var(--shadow-sm);
-
-    transition:.2s ease;
-
-}
-
-
-.search-box input:focus{
-
-    border-color:var(--primary);
-
-    box-shadow:
-        0 0 0 3px
-        rgba(23,105,255,.09);
-
-}
-
-
-.search-icon{
-
-    position:absolute;
-
-    left:16px;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    color:#98a2b3;
-
-    font-size:16px;
-
-}
-
-
-/* =====================================================
-   LOCATION
-===================================================== */
-
-.location-section{
-
-    margin-top:25px;
-
-    animation:
-        fadeIn .3s ease;
-
-}
-
-
-.location-section.hidden{
-
-    display:none;
-
-}
-
-
-.location-title{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    color:var(--dark);
-
-    font-size:21px;
-
-    font-weight:700;
-
-    margin-bottom:17px;
-
-    padding-bottom:12px;
-
-    border-bottom:
-        1px solid var(--border);
-
-}
-
-
-.location-icon{
-
-    width:34px;
-
-    height:34px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border-radius:9px;
-
-    background:#eef5ff;
-
-    font-size:16px;
-
-}
-
-
-/* =====================================================
-   COMPACT POLICY GRID
-===================================================== */
-
-.policy-list{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:15px;
-
-}
-
-
-/* =====================================================
-   COMPACT DOCUMENT CARD
-===================================================== */
-
-.document-card{
-
-    position:relative;
-
-    background:white;
-
-    border:
-        1px solid var(--border);
-
-    border-radius:12px;
-
-    padding:18px;
-
-    box-shadow:var(--shadow-sm);
-
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease,
-        border-color .2s ease;
-
-    overflow:hidden;
-
-}
-
-
-.document-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    height:2px;
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--primary),
-            var(--secondary)
-        );
-
-}
-
-
-.document-card:hover{
-
-    transform:
-        translateY(-4px);
-
-    border-color:#cbdcff;
-
-    box-shadow:var(--shadow-md);
-
-}
-
-
-/* =====================================================
-   DOCUMENT ICON
-===================================================== */
-
-.document-top{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    margin-bottom:12px;
-
-}
-
-
-.document-icon{
-
-    width:36px;
-
-    height:36px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border-radius:9px;
-
-    background:#fff2f2;
-
-    color:var(--danger);
-
-    font-size:17px;
-
-}
-
-
-.document-number{
-
-    font-size:10px;
-
-    color:#98a2b3;
-
-    font-weight:600;
-
-}
-
-
-/* =====================================================
-   DOCUMENT CONTENT
-===================================================== */
-
-.document-card h3{
-
-    color:var(--dark);
-
-    font-size:15px;
-
-    line-height:1.4;
-
-    margin-bottom:6px;
-
-}
-
-
-.document-description{
-
-    color:var(--muted);
-
-    font-size:11.5px;
-
-    line-height:1.55;
-
-    min-height:52px;
-
-    margin-bottom:10px;
-
-}
-
-
-/* =====================================================
-   FILE NAME
-===================================================== */
-
-.document-file{
-
-    display:inline-block;
-
-    max-width:100%;
-
-    padding:4px 7px;
-
-    margin-bottom:12px;
-
-    background:#f5f7fa;
-
-    border-radius:5px;
-
-    color:#667085;
-
-    font-family:
-        monospace;
-
-    font-size:9px;
-
-    white-space:nowrap;
-
-}
-
-
-/* =====================================================
-   BUTTONS
-===================================================== */
-
-.document-actions{
-
-    display:flex;
-
-    gap:6px;
-
-}
-
-
-.view-btn,
-.download-btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    min-height:32px;
-
-    padding:
-        0 11px;
-
-    border-radius:7px;
-
-    font-size:10.5px;
-
-    font-weight:600;
-
-    transition:.2s ease;
-
-}
-
-
-.view-btn{
-
-    background:var(--primary);
-
-    color:white;
-
-}
-
-
-.view-btn:hover{
-
-    background:var(--primary-dark);
-
-}
-
-
-.download-btn{
-
-    background:#f2f4f7;
-
-    color:#344054;
-
-}
-
-
-.download-btn:hover{
-
-    background:#e4e7ec;
-
-}
-
-
-/* =====================================================
-   LOADING
-===================================================== */
-
-.loading{
-
-    text-align:center;
-
-    padding:35px;
-
-    color:var(--primary);
-
-    font-size:13px;
-
-}
-
-
-.loading-spinner{
-
-    width:30px;
-
-    height:30px;
-
-    border:
-        3px solid #dce8ff;
-
-    border-top-color:
-        var(--primary);
-
-    border-radius:50%;
-
-    animation:
-        spin .8s linear infinite;
-
-    margin:
-        0 auto 10px;
-
-}
-
-
-/* =====================================================
-   NO PDF
-===================================================== */
-
-.no-pdf{
-
-    grid-column:1/-1;
-
-    padding:28px;
-
-    background:white;
-
-    border:
-        1px solid var(--border);
-
-    border-radius:11px;
-
-    color:var(--muted);
-
-    text-align:center;
-
-    font-size:13px;
-
-}
-
-
-/* =====================================================
-   ERROR
-===================================================== */
-
-.error-message{
-
-    max-width:750px;
-
-    margin:
-        0 auto 25px;
-
-    padding:17px;
-
-    background:#fff5f5;
-
-    border:
-        1px solid #ffd4d4;
-
-    border-radius:10px;
-
-    color:#b42318;
-
-    text-align:center;
-
-    font-size:13px;
-
-}
-
-
-.error-message strong{
-
-    display:block;
-
-    margin-bottom:3px;
-
-}
-
-
-/* =====================================================
-   ABOUT
-===================================================== */
-
-.about-section{
-
-    background:white;
-
-    padding:80px 20px;
-
-}
-
-
-.about-grid{
-
-    display:grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap:50px;
-
-    align-items:center;
-
-}
-
-
-.about-content h2{
-
-    color:var(--dark);
-
-    font-size:36px;
-
-    line-height:1.2;
-
-    letter-spacing:-1px;
-
-    margin-bottom:15px;
-
-}
-
-
-.about-content p{
-
-    color:var(--muted);
-
-    font-size:14px;
-
-    margin-bottom:12px;
-
-}
-
-
-.about-cards{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
-    gap:13px;
-
-}
-
-
-.about-card{
-
-    padding:19px;
-
-    background:#f8faff;
-
-    border:
-        1px solid var(--border);
-
-    border-radius:11px;
-
-}
-
-
-.about-card-icon{
-
-    font-size:21px;
-
-    margin-bottom:8px;
-
-}
-
-
-.about-card h3{
-
-    color:var(--dark);
-
-    font-size:14px;
-
-    margin-bottom:5px;
-
-}
-
-
-.about-card p{
-
-    color:var(--muted);
-
-    font-size:11.5px;
-
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer{
-
-    background:#0b1220;
-
-    color:white;
-
-    padding:35px 20px;
-
-    text-align:center;
-
-}
-
-
-.footer-brand{
-
-    font-size:22px;
-
-    font-weight:800;
-
-    margin-bottom:5px;
-
-}
-
-
-footer p{
-
-    color:#98a2b3;
-
-    font-size:12px;
-
-}
-
-
-.footer-line{
-
-    width:40px;
-
-    height:2px;
-
-    margin:
-        14px auto;
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--primary),
-            var(--secondary)
-        );
-
-}
-
-
-/* =====================================================
-   TOP BUTTON
-===================================================== */
-
-#topBtn{
-
-    position:fixed;
-
-    right:22px;
-
-    bottom:22px;
-
-    width:42px;
-
-    height:42px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:var(--primary);
-
-    color:white;
-
-    font-size:18px;
-
-    cursor:pointer;
-
-    box-shadow:
-        0 6px 18px
-        rgba(23,105,255,.28);
-
-    display:none;
-
-    z-index:999;
-
-}
-
-
-#topBtn:hover{
-
-    background:var(--primary-dark);
-
-}
-
-
-/* =====================================================
-   ANIMATIONS
-===================================================== */
-
-@keyframes spin{
-
-    to{
-
-        transform:rotate(360deg);
-
-    }
-
-}
-
-
-@keyframes fadeIn{
-
-    from{
-
-        opacity:0;
-
-        transform:
-            translateY(7px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:
-            translateY(0);
-
-    }
-
-}
-
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media(max-width:950px){
-
-    .policy-list{
-
-        grid-template-columns:
-            repeat(2,1fr);
-
-    }
-
-
-    .about-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media(max-width:700px){
-
-    nav{
-
-        height:68px;
-
-    }
-
-
-    header{
-
-        height:68px;
-
-    }
-
-
-    .company-logo{
-
-        width:40px;
-
-        height:40px;
-
-    }
-
-
-    .company-name{
-
-        font-size:20px;
-
-    }
-
-
-    .menu-btn{
-
-        display:block;
-
-    }
-
-
-    .nav-links{
-
-        display:none;
-
-        position:absolute;
-
-        top:68px;
-
-        left:12px;
-
-        right:12px;
-
-        padding:8px;
-
-        flex-direction:column;
-
-        align-items:stretch;
-
-        background:white;
-
-        border:
-            1px solid var(--border);
-
-        border-radius:11px;
-
-        box-shadow:
-            0 15px 40px
-            rgba(16,24,40,.12);
-
-    }
-
-
-    .nav-links.active{
-
-        display:flex;
-
-    }
-
-
-    .nav-links > li{
-
-        width:100%;
-
-    }
-
-
-    .nav-link{
-
-        width:100%;
-
-        justify-content:space-between;
-
-    }
-
-
-    .dropdown-menu{
-
-        position:static;
-
-        width:100%;
-
-        display:none;
-
-        opacity:1;
-
-        visibility:visible;
-
-        transform:none;
-
-        box-shadow:none;
-
-        border:none;
-
-        background:#f7f9fc;
-
-    }
-
-
-    .dropdown.open
-    .dropdown-menu{
-
-        display:block;
-
-    }
-
-
-    .dropdown:hover
-    .dropdown-menu{
-
-        display:none;
-
-    }
-
-
-    .dropdown.open
-    .dropdown-menu{
-
-        display:block;
-
-    }
-
-
-    .hero{
-
-        min-height:540px;
-
-        padding:
-            110px 18px 70px;
-
-    }
-
-
-    .hero h1{
-
-        font-size:42px;
-
-        letter-spacing:-1.5px;
-
-    }
-
-
-    .hero p{
-
-        font-size:15px;
-
-    }
-
-
-    .policy-section{
-
-        padding:
-            60px 15px;
-
-    }
-
-
-    .policy-header{
-
-        align-items:flex-start;
-
-        flex-direction:column;
-
-    }
-
-
-    .policy-list{
-
-        grid-template-columns:1fr;
-
-    }
-
-
-    .section-title{
-
-        font-size:28px;
-
-    }
-
-
-    .about-section{
-
-        padding:
-            65px 18px;
-
-    }
-
-
-    .about-content h2{
-
-        font-size:29px;
-
-    }
-
-
-    .about-cards{
-
-        grid-template-columns:1fr;
-
-    }
-
-}
-
-
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
-
-@media(max-width:400px){
-
-    .hero h1{
-
-        font-size:36px;
-
-    }
-
-
-    .document-card{
-
-        padding:16px;
-
-    }
-
-
-    .document-description{
-
-        min-height:auto;
-
-    }
-
-}
-
-</style>
+    </style>
 
 </head>
 
@@ -1735,127 +1021,156 @@ footer p{
 
 <header>
 
-<nav>
+    <nav class="navbar">
 
 
-<div class="logo-area">
+        <!-- LOGO -->
 
-<img
-    src="images/company-logo.png"
-    alt="SL India Company Logo"
-    class="company-logo"
->
+        <a
+            href="#home"
+            class="logo-area"
+        >
 
-<div class="company-name">
-    SL India
-</div>
+            <img
+                src="./images/company-logo.png"
+                alt="SL India Logo"
+                class="company-logo"
+            >
 
-</div>
+            <span class="company-name">
+                SL India
+            </span>
 
-
-
-<button
-    class="menu-btn"
-    id="menuBtn"
-    aria-label="Open navigation menu"
->
-    ☰
-</button>
+        </a>
 
 
+        <!-- NAVIGATION -->
 
-<ul
-    class="nav-links"
-    id="navLinks"
->
+        <ul
+            class="nav-links"
+            id="navLinks"
+        >
 
+            <li>
 
-<li>
+                <a
+                    href="#home"
+                    class="nav-link"
+                    onclick="closeMobileMenu()"
+                >
+                    Home
+                </a>
 
-<a
-    href="#home"
-    class="nav-link"
->
-    Home
-</a>
-
-</li>
-
-
-
-<li
-    class="dropdown"
-    id="policyDropdown"
->
+            </li>
 
 
-<a
-    href="#"
-    class="nav-link"
-    id="policyMenuLink"
->
+            <li
+                class="policy-dropdown"
+                id="policyDropdown"
+            >
 
-    Policies
+                <button
+                    type="button"
+                    class="dropdown-button"
+                    onclick="togglePolicyDropdown(event)"
+                >
 
-    <span class="dropdown-arrow">
-        ▾
-    </span>
+                    Policies
 
-</a>
+                    <span class="dropdown-arrow">
+                        ▼
+                    </span>
 
-
-
-<div class="dropdown-menu">
-
-
-<button
-    type="button"
-    onclick="showPolicies('pune')"
->
-    📍 Pune Policy
-</button>
+                </button>
 
 
-
-<button
-    type="button"
-    onclick="showPolicies('chennai')"
->
-    🏙️ Chennai Policy
-</button>
+                <div class="dropdown-menu">
 
 
+                    <button
+                        type="button"
+                        class="policy-option"
+                        onclick="showPolicies('pune')"
+                    >
 
-<button
-    type="button"
-    onclick="showPolicies('ap')"
->
-    🛡️ AP Policy
-</button>
+                        <span class="policy-option-icon">
+                            📍
+                        </span>
 
+                        <span>
+                            Pune
+                        </span>
 
-</div>
-
-
-</li>
-
-
-
-<li>
-
-<a
-    href="#about"
-    class="nav-link"
->
-    About
-</a>
-
-</li>
+                    </button>
 
 
-</ul>
+                    <button
+                        type="button"
+                        class="policy-option"
+                        onclick="showPolicies('chennai')"
+                    >
 
-</nav>
+                        <span class="policy-option-icon">
+                            🏙️
+                        </span>
+
+                        <span>
+                            Chennai
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="policy-option"
+                        onclick="showPolicies('ap')"
+                    >
+
+                        <span class="policy-option-icon">
+                            🛡️
+                        </span>
+
+                        <span>
+                            AP
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+            </li>
+
+
+            <li>
+
+                <a
+                    href="#about"
+                    class="nav-link"
+                    onclick="closeMobileMenu()"
+                >
+                    About
+                </a>
+
+            </li>
+
+        </ul>
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            type="button"
+            class="mobile-menu-button"
+            onclick="toggleMobileMenu()"
+            aria-label="Open navigation menu"
+        >
+            ☰
+        </button>
+
+
+    </nav>
 
 </header>
 
@@ -1870,42 +1185,45 @@ footer p{
     id="home"
 >
 
-
-<div class="hero-content">
-
-
-<div class="hero-badge">
-
-<span></span>
-
-Official Company Policy Portal
-
-</div>
+    <div class="hero-content">
 
 
-
-<h1>
-
-SL India
-
-<br>
-
-Company Policies
-
-</h1>
+        <div class="hero-badge">
+            SL India • Company Policy Portal
+        </div>
 
 
-
-<p>
-
-A centralized policy portal for accessing
-important company policies, guidelines,
-safety information and compliance documents.
-
-</p>
+        <h1>
+            SL India
+        </h1>
 
 
-</div>
+        <p class="hero-description">
+
+            A centralized platform for accessing
+            company policies, guidelines,
+            safety procedures and important
+            organizational documents.
+
+        </p>
+
+
+        <a
+            href="#policies-area"
+            class="hero-button"
+            onclick="return goToPolicies()"
+        >
+
+            Explore Policies
+
+            <span style="margin-left:7px;">
+                ↓
+            </span>
+
+        </a>
+
+
+    </div>
 
 </section>
 
@@ -1913,238 +1231,178 @@ safety information and compliance documents.
 
 <!-- =====================================================
      POLICY SECTION
-     HIDDEN UNTIL LOCATION IS SELECTED
 ===================================================== -->
 
 <section
     class="policy-section"
-    id="policies"
-    style="display:none;"
+    id="policies-area"
 >
 
+    <div class="container">
 
-<div class="container">
 
+        <!-- INITIAL STATE -->
 
-<div class="policy-header">
+        <div
+            class="policy-placeholder"
+            id="policyPlaceholder"
+        >
 
+            <div class="placeholder-icon">
+                ☰
+            </div>
 
-<div>
 
+            <h2>
+                Select a Policy Location
+            </h2>
 
-<span class="section-label">
-    Policy Portal
-</span>
 
+            <p>
 
-<h2
-    class="section-title"
-    id="policyPageTitle"
->
-    Policy Documents
-</h2>
+                Please open the
+                <strong>Policies</strong>
+                menu and select Pune,
+                Chennai or AP.
 
+            </p>
 
-<p class="section-description">
+        </div>
 
-View the latest approved policy documents
-for the selected SL India location.
 
-</p>
 
-</div>
+        <!-- =================================================
+             PUNE
+        ================================================== -->
 
+        <div
+            id="punePolicies"
+            class="hidden"
+        >
 
+            <div class="location-header">
 
-<div
-    class="policy-count"
-    id="policyCount"
->
-    📄 0 Documents
-</div>
+                <div class="location-heading">
 
+                    <div class="location-icon">
+                        📍
+                    </div>
 
-</div>
+                    <div>
 
+                        <h2>
+                            Pune Policies
+                        </h2>
 
+                        <p>
+                            Policies applicable to the Pune location.
+                        </p>
 
-<!-- =====================================================
-     SEARCH
-===================================================== -->
+                    </div>
 
-<div class="search-box">
+                </div>
 
+            </div>
 
-<span class="search-icon">
-    🔎
-</span>
 
+            <div
+                class="policy-grid"
+                id="punePolicyGrid"
+            >
+            </div>
 
-<input
-    type="text"
-    id="policySearch"
-    placeholder="Search policy documents..."
-    oninput="searchPolicies()"
->
+        </div>
 
 
-</div>
 
+        <!-- =================================================
+             CHENNAI
+        ================================================== -->
 
+        <div
+            id="chennaiPolicies"
+            class="hidden"
+        >
 
-<!-- =====================================================
-     LOADING
-===================================================== -->
+            <div class="location-header">
 
-<div
-    id="loading"
-    class="loading"
->
+                <div class="location-heading">
 
+                    <div class="location-icon">
+                        🏙️
+                    </div>
 
-<div class="loading-spinner"></div>
+                    <div>
 
+                        <h2>
+                            Chennai Policies
+                        </h2>
 
-Loading policy documents...
+                        <p>
+                            Policies applicable to the Chennai location.
+                        </p>
 
+                    </div>
 
-</div>
+                </div>
 
+            </div>
 
 
-<!-- =====================================================
-     ERROR
-===================================================== -->
+            <div
+                class="policy-grid"
+                id="chennaiPolicyGrid"
+            >
+            </div>
 
-<div
-    id="error"
-    class="error-message"
-    style="display:none;"
->
+        </div>
 
 
-<strong>
-    Unable to load policy documents.
-</strong>
 
+        <!-- =================================================
+             AP
+        ================================================== -->
 
-<span id="errorText">
-    Please check your GitHub repository.
-</span>
+        <div
+            id="apPolicies"
+            class="hidden"
+        >
 
+            <div class="location-header">
 
-</div>
+                <div class="location-heading">
 
+                    <div class="location-icon">
+                        🛡️
+                    </div>
 
+                    <div>
 
-<!-- =====================================================
-     PUNE
-===================================================== -->
+                        <h2>
+                            AP Policies
+                        </h2>
 
-<div
-    class="location-section hidden"
-    id="pune-policy"
->
+                        <p>
+                            Policies applicable to the Andhra Pradesh location.
+                        </p>
 
+                    </div>
 
-<h3 class="location-title">
+                </div>
 
+            </div>
 
-<span class="location-icon">
-    📍
-</span>
 
+            <div
+                class="policy-grid"
+                id="apPolicyGrid"
+            >
+            </div>
 
-Pune Policy
+        </div>
 
 
-</h3>
-
-
-
-<div
-    class="policy-list"
-    id="punePolicyList"
->
-</div>
-
-
-</div>
-
-
-
-<!-- =====================================================
-     CHENNAI
-===================================================== -->
-
-<div
-    class="location-section hidden"
-    id="chennai-policy"
->
-
-
-<h3 class="location-title">
-
-
-<span class="location-icon">
-    🏙️
-</span>
-
-
-Chennai Policy
-
-
-</h3>
-
-
-
-<div
-    class="policy-list"
-    id="chennaiPolicyList"
->
-</div>
-
-
-</div>
-
-
-
-<!-- =====================================================
-     AP
-===================================================== -->
-
-<div
-    class="location-section hidden"
-    id="ap-policy"
->
-
-
-<h3 class="location-title">
-
-
-<span class="location-icon">
-    🛡️
-</span>
-
-
-AP Policy
-
-
-</h3>
-
-
-
-<div
-    class="policy-list"
-    id="apPolicyList"
->
-</div>
-
-
-</div>
-
-
-</div>
+    </div>
 
 </section>
 
@@ -2159,165 +1417,81 @@ AP Policy
     id="about"
 >
 
+    <div class="about-content">
 
-<div class="container">
 
+        <div class="about-label">
+            About SL India
+        </div>
 
-<div class="about-grid">
 
+        <h2>
+            Policy & Compliance
+        </h2>
 
-<div class="about-content">
 
+        <p class="about-description">
 
-<span class="section-label">
-    About SL India
-</span>
+            The SL India Policy Portal provides
+            employees and relevant stakeholders
+            with convenient access to approved
+            company policies and guidelines.
+            Always refer to the latest approved
+            document for current requirements.
 
+        </p>
 
 
-<h2>
+        <div class="about-grid">
 
-Clear policies.
-<br>
-Better workplaces.
 
-</h2>
+            <div class="about-box">
 
+                <h3>
+                    Policy Compliance
+                </h3>
 
+                <p>
+                    Employees and relevant stakeholders
+                    are expected to understand and follow
+                    applicable company policies.
+                </p>
 
-<p>
+            </div>
 
-The SL India Policy Portal provides a
-centralized location for employees and
-relevant stakeholders to access approved
-company policies and guidelines.
 
-</p>
+            <div class="about-box">
 
+                <h3>
+                    Document Control
+                </h3>
 
+                <p>
+                    Always refer to the latest approved
+                    version of each policy document.
+                </p>
 
-<p>
+            </div>
 
-Policies are organized by location to make
-it easier to find the documents applicable
-to your workplace.
 
-</p>
+            <div class="about-box">
 
+                <h3>
+                    Policy Review
+                </h3>
 
-</div>
+                <p>
+                    Policies may be reviewed and updated
+                    based on business and regulatory
+                    requirements.
+                </p>
 
+            </div>
 
 
-<div class="about-cards">
+        </div>
 
-
-<div class="about-card">
-
-
-<div class="about-card-icon">
-    🛡️
-</div>
-
-
-<h3>
-    Compliance
-</h3>
-
-
-<p>
-
-Employees and relevant stakeholders
-are expected to understand and follow
-applicable company policies.
-
-</p>
-
-
-</div>
-
-
-
-<div class="about-card">
-
-
-<div class="about-card-icon">
-    📄
-</div>
-
-
-<h3>
-    Document Control
-</h3>
-
-
-<p>
-
-Always refer to the latest approved
-version available through this portal.
-
-</p>
-
-
-</div>
-
-
-
-<div class="about-card">
-
-
-<div class="about-card-icon">
-    🔄
-</div>
-
-
-<h3>
-    Policy Updates
-</h3>
-
-
-<p>
-
-Policies may be reviewed and updated
-according to business and regulatory
-requirements.
-
-</p>
-
-
-</div>
-
-
-
-<div class="about-card">
-
-
-<div class="about-card-icon">
-    🌐
-</div>
-
-
-<h3>
-    Centralized Access
-</h3>
-
-
-<p>
-
-Access policy documents for Pune,
-Chennai and AP from one portal.
-
-</p>
-
-
-</div>
-
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
@@ -2329,34 +1503,28 @@ Chennai and AP from one portal.
 
 <footer>
 
+    <h2>
+        SL India
+    </h2>
 
-<div class="footer-brand">
-    SL India
-</div>
+    <p>
+        Company Policy Portal • Pune • Chennai • AP
+    </p>
 
-
-<p>
-    Company Policies • Pune • Chennai • AP
-</p>
-
-
-<div class="footer-line"></div>
-
-
-<p>
-    © 2026 SL India. All Rights Reserved.
-</p>
-
+    <p style="margin-top:8px;">
+        © 2026 SL India. All Rights Reserved.
+    </p>
 
 </footer>
 
 
 
 <!-- =====================================================
-     TOP BUTTON
+     BACK TO TOP
 ===================================================== -->
 
 <button
+    type="button"
     id="topBtn"
     onclick="topFunction()"
     aria-label="Back to top"
@@ -2368,1507 +1536,555 @@ Chennai and AP from one portal.
 
 <script>
 
-/* =====================================================
-   GITHUB CONFIGURATION
-===================================================== */
-
-const GITHUB_OWNER =
-    "babudevadurag-dot";
-
-
-const GITHUB_REPO =
-    "sllumax";
-
-
-const GITHUB_BRANCH =
-    "main";
-
 
 /* =====================================================
-   POLICY DOCUMENT CONFIGURATION
-
-   IMPORTANT:
-
-   Keep the PDF filenames exactly as defined below.
-
-   You can change the title and description
-   without changing the PDF filename.
+   POLICY CONFIGURATION
+   -----------------------------------------------------
+   THIS IS THE ONLY SECTION YOU NEED TO EDIT WHEN
+   CHANGING POLICY NAMES OR DETAILS.
 ===================================================== */
 
-const POLICY_FOLDERS = {
+const POLICY_DATA = {
 
 
     /* =================================================
        PUNE
-    ================================================= */
+    ================================================== */
 
-    pune: {
+    pune: [
 
-        name:
-            "Pune Policy",
+        {
+            file: "pp1.pdf",
 
-        folder:
-            "Pune-Policy",
+            title: "Pune Safety Policy",
 
-        element:
-            "punePolicyList",
+            description:
+                "Safety guidelines and workplace requirements applicable to the Pune location."
+        },
 
+        {
+            file: "pp2.pdf",
 
-        documents: {
+            title: "Pune HR Policy",
 
+            description:
+                "Human resource policies and employee requirements applicable to Pune."
+        },
 
-            "pp1.pdf": {
+        {
+            file: "pp3.pdf",
 
-                title:
-                    "Health & Safety Policy",
+            title: "Pune Leave Policy",
 
-                description:
-                    "Guidelines for maintaining a safe and healthy workplace at the Pune location."
+            description:
+                "Leave, attendance and related employee guidelines for Pune."
+        },
 
-            },
+        {
+            file: "pp4.pdf",
 
+            title: "Pune Risk Management Policy",
 
-            "pp2.pdf": {
+            description:
+                "Guidelines for identifying, assessing and managing workplace risks."
+        },
 
-                title:
-                    "Environmental Management Policy",
+        {
+            file: "pp5.pdf",
 
-                description:
-                    "Policy covering environmental responsibilities, sustainability and responsible workplace practices."
+            title: "Pune Emergency Policy",
 
-            },
-
-
-            "pp3.pdf": {
-
-                title:
-                    "Risk Management Policy",
-
-                description:
-                    "Guidelines for identifying, assessing and controlling workplace and operational risks."
-
-            },
-
-
-            "pp4.pdf": {
-
-                title:
-                    "Emergency Response Policy",
-
-                description:
-                    "Procedures and responsibilities for responding to emergencies and unexpected incidents."
-
-            },
-
-
-            "pp5.pdf": {
-
-                title:
-                    "Employee Conduct Policy",
-
-                description:
-                    "Standards of professional behavior, workplace conduct and employee responsibilities."
-
-            }
-
+            description:
+                "Emergency response, preparedness and workplace safety procedures."
         }
 
-    },
+    ],
+
 
 
     /* =================================================
        CHENNAI
-    ================================================= */
+    ================================================== */
 
-    chennai: {
+    chennai: [
 
-        name:
-            "Chennai Policy",
+        {
+            file: "cp1.pdf",
 
-        folder:
-            "Chennai-Policy",
+            title: "Chennai Safety Policy",
 
-        element:
-            "chennaiPolicyList",
+            description:
+                "Safety guidelines and workplace requirements applicable to Chennai."
+        },
 
+        {
+            file: "cp2.pdf",
 
-        documents: {
+            title: "Chennai HR Policy",
 
+            description:
+                "Human resource policies and employee requirements applicable to Chennai."
+        },
 
-            "cp1.pdf": {
+        {
+            file: "cp3.pdf",
 
-                title:
-                    "Health & Safety Policy",
+            title: "Chennai Leave Policy",
 
-                description:
-                    "Guidelines for maintaining a safe and healthy workplace at the Chennai location."
+            description:
+                "Leave, attendance and related employee guidelines for Chennai."
+        },
 
-            },
+        {
+            file: "cp4.pdf",
 
+            title: "Chennai Risk Management Policy",
 
-            "cp2.pdf": {
+            description:
+                "Guidelines for identifying, assessing and managing workplace risks."
+        },
 
-                title:
-                    "Environmental Management Policy",
+        {
+            file: "cp5.pdf",
 
-                description:
-                    "Policy covering environmental responsibilities, sustainability and responsible workplace practices."
+            title: "Chennai Emergency Policy",
 
-            },
-
-
-            "cp3.pdf": {
-
-                title:
-                    "Risk Management Policy",
-
-                description:
-                    "Guidelines for identifying, assessing and controlling workplace and operational risks."
-
-            },
-
-
-            "cp4.pdf": {
-
-                title:
-                    "Emergency Response Policy",
-
-                description:
-                    "Procedures and responsibilities for responding to emergencies and unexpected incidents."
-
-            },
-
-
-            "cp5.pdf": {
-
-                title:
-                    "Employee Conduct Policy",
-
-                description:
-                    "Standards of professional behavior, workplace conduct and employee responsibilities."
-
-            }
-
+            description:
+                "Emergency response, preparedness and workplace safety procedures."
         }
 
-    },
+    ],
+
 
 
     /* =================================================
        AP
-    ================================================= */
+    ================================================== */
+
+    ap: [
+
+        {
+            file: "ap1.pdf",
+
+            title: "AP Safety Policy",
+
+            description:
+                "Safety guidelines and workplace requirements applicable to AP."
+        },
+
+        {
+            file: "ap2.pdf",
+
+            title: "AP HR Policy",
+
+            description:
+                "Human resource policies and employee requirements applicable to AP."
+        },
+
+        {
+            file: "ap3.pdf",
+
+            title: "AP Leave Policy",
+
+            description:
+                "Leave, attendance and related employee guidelines for AP."
+        },
+
+        {
+            file: "ap4.pdf",
+
+            title: "AP Risk Management Policy",
+
+            description:
+                "Guidelines for identifying, assessing and managing workplace risks."
+        },
+
+        {
+            file: "ap5.pdf",
+
+            title: "AP Emergency Policy",
+
+            description:
+                "Emergency response, preparedness and workplace safety procedures."
+        }
+
+    ]
+
+};
+
+
+
+/* =====================================================
+   FOLDER CONFIGURATION
+===================================================== */
+
+const LOCATION_CONFIG = {
+
+    pune: {
+
+        folder: "Pune-Policy",
+
+        grid: "punePolicyGrid",
+
+        section: "punePolicies"
+
+    },
+
+    chennai: {
+
+        folder: "Chennai-Policy",
+
+        grid: "chennaiPolicyGrid",
+
+        section: "chennaiPolicies"
+
+    },
 
     ap: {
 
-        name:
-            "AP Policy",
+        folder: "AP-Policy",
 
-        folder:
-            "AP-Policy",
+        grid: "apPolicyGrid",
 
-        element:
-            "apPolicyList",
-
-
-        documents: {
-
-
-            "ap1.pdf": {
-
-                title:
-                    "Health & Safety Policy",
-
-                description:
-                    "Guidelines for maintaining a safe and healthy workplace at the AP location."
-
-            },
-
-
-            "ap2.pdf": {
-
-                title:
-                    "Environmental Management Policy",
-
-                description:
-                    "Policy covering environmental responsibilities, sustainability and responsible workplace practices."
-
-            },
-
-
-            "ap3.pdf": {
-
-                title:
-                    "Risk Management Policy",
-
-                description:
-                    "Guidelines for identifying, assessing and controlling workplace and operational risks."
-
-            },
-
-
-            "ap4.pdf": {
-
-                title:
-                    "Emergency Response Policy",
-
-                description:
-                    "Procedures and responsibilities for responding to emergencies and unexpected incidents."
-
-            },
-
-
-            "ap5.pdf": {
-
-                title:
-                    "Employee Conduct Policy",
-
-                description:
-                    "Standards of professional behavior, workplace conduct and employee responsibilities."
-
-            }
-
-        }
+        section: "apPolicies"
 
     }
 
 };
 
 
-/* =====================================================
-   GITHUB API
-===================================================== */
-
-const GITHUB_API =
-
-    "https://api.github.com/repos/" +
-
-    GITHUB_OWNER +
-
-    "/" +
-
-    GITHUB_REPO +
-
-    "/contents/";
-
 
 /* =====================================================
-   LOAD ALL POLICY FOLDERS
+   CREATE POLICY CARDS
 ===================================================== */
 
-async function loadPolicies(){
+function createPolicyCards() {
 
 
-    const loading =
-        document.getElementById(
-            "loading"
-        );
+    Object.keys(POLICY_DATA).forEach(
+        function(location) {
 
 
-    const error =
-        document.getElementById(
-            "error"
-        );
+            const config =
+                LOCATION_CONFIG[location];
 
 
-    const errorText =
-        document.getElementById(
-            "errorText"
-        );
+            const grid =
+                document.getElementById(
+                    config.grid
+                );
 
 
-    loading.style.display =
-        "block";
+            if (!grid) {
+                return;
+            }
 
 
-    error.style.display =
-        "none";
+            grid.innerHTML = "";
 
 
-    try{
+            POLICY_DATA[location].forEach(
+                function(policy) {
 
 
-        const results =
+                    const card =
+                        document.createElement(
+                            "article"
+                        );
 
-            await Promise.all([
 
-                loadPolicyFolder(
-                    POLICY_FOLDERS.pune
-                ),
+                    card.className =
+                        "policy-card";
 
-                loadPolicyFolder(
-                    POLICY_FOLDERS.chennai
-                ),
 
-                loadPolicyFolder(
-                    POLICY_FOLDERS.ap
-                )
+                    const safeTitle =
+                        escapeHTML(
+                            policy.title
+                        );
 
-            ]);
 
+                    const safeDescription =
+                        escapeHTML(
+                            policy.description
+                        );
 
-        const hasError =
 
-            results.some(
-                result =>
-                    result === false
-            );
+                    const safeFile =
+                        escapeHTML(
+                            policy.file
+                        );
 
 
-        if(hasError){
+                    /*
+                       IMPORTANT:
+                       ./ is used so this works on:
 
-            throw new Error(
-                "One or more policy folders could not be loaded."
-            );
+                       github.io/sllumax/
 
-        }
+                       as well as:
 
+                       localhost
+                    */
 
-        loading.style.display =
-            "none";
+                    const pdfURL =
+                        "./pdf/" +
+                        config.folder +
+                        "/" +
+                        encodeURIComponent(
+                            policy.file
+                        );
 
 
-        updatePolicyCount();
+                    card.innerHTML = `
 
+                        <div class="document-icon">
+                            📄
+                        </div>
 
-        /*
-           IMPORTANT:
+                        <h3>
+                            ${safeTitle}
+                        </h3>
 
-           Keep policy section hidden.
+                        <div class="file-name">
+                            ${safeFile}
+                        </div>
 
-           User must select a location
-           from the Policies dropdown.
-        */
+                        <p>
+                            ${safeDescription}
+                        </p>
 
-        document.getElementById(
-            "policies"
-        ).style.display =
-            "none";
+                        <a
+                            href="${pdfURL}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="view-pdf"
+                        >
+                            View PDF →
+                        </a>
 
+                    `;
 
-    }
-    catch(errorObject){
 
-
-        console.error(
-            "SL INDIA POLICY ERROR:",
-            errorObject
-        );
-
-
-        loading.style.display =
-            "none";
-
-
-        error.style.display =
-            "block";
-
-
-        errorText.innerText =
-
-            errorObject.message ||
-
-            "Unable to connect to GitHub.";
-
-    }
-
-}
-
-
-/* =====================================================
-   LOAD POLICY FOLDER
-===================================================== */
-
-async function loadPolicyFolder(
-    policy
-){
-
-
-    const container =
-
-        document.getElementById(
-            policy.element
-        );
-
-
-    const folderPath =
-
-        "pdf/" +
-
-        policy.folder;
-
-
-    const apiURL =
-
-        GITHUB_API +
-
-        folderPath
-            .split("/")
-            .map(
-                encodeURIComponent
-            )
-            .join("/") +
-
-        "?ref=" +
-
-        encodeURIComponent(
-            GITHUB_BRANCH
-        );
-
-
-    try{
-
-
-        const response =
-
-            await fetch(
-
-                apiURL,
-
-                {
-
-                    method:"GET",
-
-                    headers:{
-
-                        "Accept":
-                        "application/vnd.github+json"
-
-                    },
-
-                    cache:
-                        "no-store"
+                    grid.appendChild(card);
 
                 }
-
-            );
-
-
-        if(!response.ok){
-
-
-            let message =
-
-                "GitHub returned HTTP " +
-                response.status;
-
-
-            if(
-                response.status === 404
-            ){
-
-                message =
-
-                    policy.name +
-                    " folder was not found.";
-
-            }
-
-
-            if(
-                response.status === 403
-            ){
-
-                message =
-
-                    "GitHub API request limit reached.";
-
-            }
-
-
-            throw new Error(
-                message
             );
 
         }
-
-
-        const files =
-            await response.json();
-
-
-        if(
-            !Array.isArray(files)
-        ){
-
-            throw new Error(
-                "Invalid GitHub folder response."
-            );
-
-        }
-
-
-        /*
-           Only PDF files.
-        */
-
-        const pdfFiles =
-
-            files
-
-                .filter(
-
-                    file =>
-
-                        file.type === "file" &&
-
-                        typeof file.name === "string" &&
-
-                        file.name
-                            .toLowerCase()
-                            .endsWith(".pdf")
-
-                )
-
-                .sort(
-
-                    (a,b) =>
-
-                        a.name.localeCompare(
-
-                            b.name,
-
-                            undefined,
-
-                            {
-
-                                numeric:true,
-
-                                sensitivity:"base"
-
-                            }
-
-                        )
-
-                );
-
-
-        /*
-           Clear existing content.
-        */
-
-        container.innerHTML =
-            "";
-
-
-        /*
-           No PDF.
-        */
-
-        if(
-            pdfFiles.length === 0
-        ){
-
-            container.innerHTML = `
-
-                <div class="no-pdf">
-
-                    No PDF documents are currently
-                    available in the
-                    ${escapeHTML(
-                        policy.name
-                    )}
-                    folder.
-
-                </div>
-
-            `;
-
-
-            return true;
-
-        }
-
-
-        /*
-           Create cards.
-        */
-
-        pdfFiles.forEach(
-
-            file => {
-
-                createPDFCard(
-
-                    file,
-
-                    container,
-
-                    policy
-
-                );
-
-            }
-
-        );
-
-
-        return true;
-
-
-    }
-    catch(errorObject){
-
-
-        console.error(
-
-            policy.name +
-            " loading error:",
-
-            errorObject
-
-        );
-
-
-        container.innerHTML = `
-
-            <div class="no-pdf">
-
-                Unable to load
-                ${escapeHTML(
-                    policy.name
-                )}
-                documents.
-
-                <br><br>
-
-                <small>
-
-                    ${escapeHTML(
-                        errorObject.message
-                    )}
-
-                </small>
-
-            </div>
-
-        `;
-
-
-        return false;
-
-    }
-
-}
-
-
-/* =====================================================
-   CREATE PDF CARD
-===================================================== */
-
-function createPDFCard(
-
-    file,
-
-    container,
-
-    policy
-
-){
-
-
-    /*
-       PDF URL
-    */
-
-    const pdfURL =
-
-        file.download_url ||
-
-        (
-
-            "https://github.com/" +
-
-            GITHUB_OWNER +
-
-            "/" +
-
-            GITHUB_REPO +
-
-            "/raw/refs/heads/" +
-
-            GITHUB_BRANCH +
-
-            "/" +
-
-            file.path
-
-                .split("/")
-
-                .map(
-                    encodeURIComponent
-                )
-
-                .join("/")
-
-        );
-
-
-    /*
-       Find predefined information.
-    */
-
-    const fileName =
-
-        file.name.toLowerCase();
-
-
-    const documentInfo =
-
-        policy.documents[fileName];
-
-
-    let title;
-
-    let description;
-
-
-    /*
-       Use predefined title/details.
-    */
-
-    if(documentInfo){
-
-        title =
-            documentInfo.title;
-
-        description =
-            documentInfo.description;
-
-    }
-
-
-    /*
-       Fallback for new files.
-    */
-
-    else{
-
-
-        title =
-
-            file.name
-
-                .replace(
-                    /\.pdf$/i,
-                    ""
-                )
-
-                .replace(
-                    /[-_]+/g,
-                    " "
-                )
-
-                .replace(
-                    /\s+/g,
-                    " "
-                )
-
-                .trim()
-
-                .replace(
-                    /\b\w/g,
-                    letter =>
-                        letter.toUpperCase()
-                );
-
-
-        description =
-
-            policy.name +
-            " policy document.";
-
-    }
-
-
-    /*
-       Create card.
-    */
-
-    const card =
-
-        document.createElement(
-            "div"
-        );
-
-
-    card.className =
-
-        "document-card policy-document";
-
-
-    /*
-       Search information.
-    */
-
-    card.dataset.search =
-
-        (
-
-            title +
-
-            " " +
-
-            description +
-
-            " " +
-
-            file.name +
-
-            " " +
-
-            policy.name
-
-        ).toLowerCase();
-
-
-    /*
-       Determine document number.
-    */
-
-    const documentNumber =
-
-        file.name
-            .replace(
-                /\.pdf$/i,
-                ""
-            )
-            .toUpperCase();
-
-
-    /*
-       Card HTML.
-    */
-
-    card.innerHTML = `
-
-        <div class="document-top">
-
-
-            <div class="document-icon">
-                📄
-            </div>
-
-
-            <span class="document-number">
-                ${escapeHTML(
-                    documentNumber
-                )}
-            </span>
-
-
-        </div>
-
-
-
-        <h3>
-
-            ${escapeHTML(title)}
-
-        </h3>
-
-
-
-        <p class="document-description">
-
-            ${escapeHTML(description)}
-
-        </p>
-
-
-
-        <div class="document-file">
-
-            ${escapeHTML(file.name)}
-
-        </div>
-
-
-
-        <div class="document-actions">
-
-
-            <a
-
-                href="${escapeAttribute(
-                    pdfURL
-                )}"
-
-                target="_blank"
-
-                rel="noopener noreferrer"
-
-                class="view-btn"
-
-            >
-
-                View
-
-            </a>
-
-
-
-            <a
-
-                href="${escapeAttribute(
-                    pdfURL
-                )}"
-
-                download
-
-                class="download-btn"
-
-            >
-
-                Download
-
-            </a>
-
-
-        </div>
-
-    `;
-
-
-    container.appendChild(
-        card
     );
 
 }
 
 
+
 /* =====================================================
-   SHOW SELECTED LOCATION ONLY
+   SHOW SELECTED LOCATION
 ===================================================== */
 
-function showPolicies(
-    selected
-){
+function showPolicies(location) {
 
 
-    const sections = {
+    /*
+       Validate location.
+    */
 
-
-        pune:
-
-            document.getElementById(
-                "pune-policy"
-            ),
-
-
-        chennai:
-
-            document.getElementById(
-                "chennai-policy"
-            ),
-
-
-        ap:
-
-            document.getElementById(
-                "ap-policy"
-            )
-
-    };
-
-
-    const policySection =
-
-        document.getElementById(
-            "policies"
-        );
-
-
-    const pageTitle =
-
-        document.getElementById(
-            "policyPageTitle"
-        );
-
-
-    if(
-
-        !sections[selected] ||
-
-        !POLICY_FOLDERS[selected]
-
-    ){
-
+    if (
+        !LOCATION_CONFIG[location]
+    ) {
         return;
-
     }
 
 
     /*
-       Hide all locations.
+       Hide placeholder.
     */
 
-    Object.values(sections)
-        .forEach(
-
-            section => {
-
-                section.classList.add(
-                    "hidden"
-                );
-
-            }
-
-        );
+    document
+        .getElementById("policyPlaceholder")
+        .classList
+        .add("hidden");
 
 
     /*
-       Show policy section.
+       Hide every policy section.
     */
 
-    policySection.style.display =
-        "block";
+    Object.keys(LOCATION_CONFIG).forEach(
+        function(key) {
+
+            document
+                .getElementById(
+                    LOCATION_CONFIG[key].section
+                )
+                .classList
+                .add("hidden");
+
+        }
+    );
 
 
     /*
-       Show only selected location.
+       Show selected policy section.
     */
 
-    sections[selected]
+    document
+        .getElementById(
+            LOCATION_CONFIG[location].section
+        )
         .classList
         .remove("hidden");
 
 
     /*
-       Update heading.
+       Close dropdown.
     */
 
-    pageTitle.innerText =
-
-        POLICY_FOLDERS[selected]
-            .name;
+    document
+        .getElementById("policyDropdown")
+        .classList
+        .remove("open");
 
 
     /*
-       Reset search.
+       Close mobile menu.
     */
 
-    const search =
-
-        document.getElementById(
-            "policySearch"
-        );
-
-
-    search.value =
-        "";
-
-
-    searchPolicies();
+    closeMobileMenu();
 
 
     /*
-       Close navigation.
-    */
-
-    closeNavigation();
-
-
-    /*
-       Scroll to policies.
+       Scroll to policy area.
     */
 
     setTimeout(
+        function() {
 
-        function(){
-
-            policySection.scrollIntoView({
-
-                behavior:
-                    "smooth",
-
-                block:
-                    "start"
-
-            });
+            document
+                .getElementById("policies-area")
+                .scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
 
         },
-
-        100
-
+        80
     );
 
 }
 
 
+
 /* =====================================================
-   SEARCH
+   POLICY DROPDOWN
 ===================================================== */
 
-function searchPolicies(){
+function togglePolicyDropdown(event) {
 
 
-    const input =
-
-        document
-
-            .getElementById(
-                "policySearch"
-            )
-
-            .value
-
-            .toLowerCase()
-
-            .trim();
+    event.stopPropagation();
 
 
-    const cards =
-
-        document.querySelectorAll(
-
-            ".policy-document"
-
+    const dropdown =
+        document.getElementById(
+            "policyDropdown"
         );
 
 
-    cards.forEach(
-
-        card => {
-
-
-            const searchText =
-
-                card.dataset.search ||
-
-                card.innerText
-                    .toLowerCase();
-
-
-            if(
-
-                searchText.includes(
-                    input
-                )
-
-            ){
-
-                card.style.display =
-                    "";
-
-            }
-            else{
-
-                card.style.display =
-                    "none";
-
-            }
-
-        }
-
-    );
-
-
-    updateVisiblePolicyCount();
+    dropdown
+        .classList
+        .toggle("open");
 
 }
 
 
+
 /* =====================================================
-   DOCUMENT COUNT
+   CLOSE DROPDOWN OUTSIDE
 ===================================================== */
 
-function updatePolicyCount(){
+document.addEventListener(
+    "click",
+    function(event) {
 
 
-    const count =
+        const dropdown =
+            document.getElementById(
+                "policyDropdown"
+            );
 
-        document.querySelectorAll(
 
-            ".policy-document"
+        if (
+            !dropdown.contains(
+                event.target
+            )
+        ) {
 
-        ).length;
+            dropdown
+                .classList
+                .remove("open");
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+function toggleMobileMenu() {
+
+
+    document
+        .getElementById("navLinks")
+        .classList
+        .toggle("active");
+
+}
+
+
+
+function closeMobileMenu() {
+
+
+    document
+        .getElementById("navLinks")
+        .classList
+        .remove("active");
+
+}
+
+
+
+/* =====================================================
+   HERO BUTTON
+===================================================== */
+
+function goToPolicies() {
+
+
+    document
+        .getElementById("policies-area")
+        .scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
 
 
     /*
-       Initial count is not particularly
-       important because policy section
-       is hidden until selection.
+       Do NOT automatically display
+       any policy.
+
+       User still has to select
+       Pune / Chennai / AP.
     */
 
-    document.getElementById(
-        "policyCount"
-    ).innerText =
-
-        "📄 " +
-
-        count +
-
-        " Document" +
-
-        (
-            count === 1
-                ? ""
-                : "s"
-        );
+    return false;
 
 }
 
-
-/* =====================================================
-   UPDATE VISIBLE COUNT
-===================================================== */
-
-function updateVisiblePolicyCount(){
-
-
-    const visibleCards =
-
-        document.querySelectorAll(
-
-            ".policy-document"
-
-        );
-
-
-    let visible = 0;
-
-
-    visibleCards.forEach(
-
-        card => {
-
-            if(
-                card.style.display !==
-                "none"
-            ){
-
-                visible++;
-
-            }
-
-        }
-
-    );
-
-
-    const count =
-
-        document.getElementById(
-            "policyCount"
-        );
-
-
-    count.innerText =
-
-        "📄 " +
-
-        visible +
-
-        " Document" +
-
-        (
-            visible === 1
-                ? ""
-                : "s"
-        );
-
-}
-
-
-/* =====================================================
-   ESCAPE HTML
-===================================================== */
-
-function escapeHTML(
-    value
-){
-
-    return String(value)
-
-        .replace(
-            /&/g,
-            "&amp;"
-        )
-
-        .replace(
-            /</g,
-            "&lt;"
-        )
-
-        .replace(
-            />/g,
-            "&gt;"
-        )
-
-        .replace(
-            /"/g,
-            "&quot;"
-        )
-
-        .replace(
-            /'/g,
-            "&#039;"
-        );
-
-}
-
-
-/* =====================================================
-   ESCAPE ATTRIBUTE
-===================================================== */
-
-function escapeAttribute(
-    value
-){
-
-    return String(value)
-
-        .replace(
-            /&/g,
-            "&amp;"
-        )
-
-        .replace(
-            /"/g,
-            "&quot;"
-        )
-
-        .replace(
-            /'/g,
-            "&#039;"
-        )
-
-        .replace(
-            /</g,
-            "&lt;"
-        )
-
-        .replace(
-            />/g,
-            "&gt;"
-        );
-
-}
-
-
-/* =====================================================
-   MOBILE NAVIGATION
-===================================================== */
-
-const menuBtn =
-
-    document.getElementById(
-        "menuBtn"
-    );
-
-
-const navLinks =
-
-    document.getElementById(
-        "navLinks"
-    );
-
-
-const policyDropdown =
-
-    document.getElementById(
-        "policyDropdown"
-    );
-
-
-const policyMenuLink =
-
-    document.getElementById(
-        "policyMenuLink"
-    );
-
-
-/*
-   Mobile menu.
-*/
-
-menuBtn.addEventListener(
-
-    "click",
-
-    function(){
-
-        navLinks.classList.toggle(
-            "active"
-        );
-
-    }
-
-);
-
-
-/*
-   Mobile Policies dropdown.
-*/
-
-policyMenuLink.addEventListener(
-
-    "click",
-
-    function(event){
-
-        if(
-            window.innerWidth <= 700
-        ){
-
-            event.preventDefault();
-
-            policyDropdown.classList.toggle(
-                "open"
-            );
-
-        }
-
-    }
-
-);
-
-
-/* =====================================================
-   CLOSE NAVIGATION
-===================================================== */
-
-function closeNavigation(){
-
-
-    navLinks.classList.remove(
-        "active"
-    );
-
-
-    policyDropdown.classList.remove(
-        "open"
-    );
-
-}
-
-
-/*
-   Close navigation when
-   Home/About are clicked.
-*/
-
-document
-
-    .querySelectorAll(
-        ".nav-links > li:not(.dropdown) a"
-    )
-
-    .forEach(
-
-        function(link){
-
-            link.addEventListener(
-
-                "click",
-
-                closeNavigation
-
-            );
-
-        }
-
-    );
 
 
 /* =====================================================
@@ -3876,28 +2092,25 @@ document
 ===================================================== */
 
 const topButton =
-
     document.getElementById(
         "topBtn"
     );
 
 
 window.addEventListener(
-
     "scroll",
+    function() {
 
-    function(){
 
-
-        if(
-            window.scrollY > 300
-        ){
+        if (
+            window.scrollY > 350
+        ) {
 
             topButton.style.display =
                 "block";
 
         }
-        else{
+        else {
 
             topButton.style.display =
                 "none";
@@ -3905,38 +2118,81 @@ window.addEventListener(
         }
 
     }
-
 );
 
 
-function topFunction(){
+
+function topFunction() {
 
 
     window.scrollTo({
 
-        top:0,
+        top: 0,
 
-        behavior:"smooth"
+        behavior: "smooth"
 
     });
 
 }
 
 
+
 /* =====================================================
-   START APPLICATION
+   HTML ESCAPE
+===================================================== */
+
+function escapeHTML(value) {
+
+
+    return String(value)
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+
+/* =====================================================
+   INITIALIZE
 ===================================================== */
 
 document.addEventListener(
-
     "DOMContentLoaded",
+    function() {
 
-    function(){
+        /*
+           Generate all 15 cards.
 
-        loadPolicies();
+           They remain hidden until
+           the user selects a location.
+        */
+
+        createPolicyCards();
 
     }
-
 );
 
 </script>
